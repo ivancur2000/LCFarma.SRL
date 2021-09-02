@@ -16,7 +16,7 @@ export const LandingPage = () => {
         handleOnChange={handleOnChange}
         changeLanguage={changeLanguage}
       />
-      <Routes />
+      <Routes changeLanguage={changeLanguage} />
       <Footer 
         changeLanguage={changeLanguage}
       />

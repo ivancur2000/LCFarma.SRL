@@ -1,0 +1,26 @@
+.item-caption1,
+.item-caption2,
+.item-caption3 {
+  color: rgb(204, 204, 204);
+  padding: 5px;
+}
+.item-caption1 h5,
+.item-caption2 h5,
+.item-caption3 h5 {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.item-caption1 {
+  background: rgb(51, 172, 131, 0.9);
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+}
+.item-caption2 {
+  background: rgb(41, 133, 102, 0.9);
+}
+.item-caption3 {
+  background: rgb(24, 90, 68, 0.9);
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+}

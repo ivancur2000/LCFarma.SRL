@@ -9,16 +9,15 @@
   background: #ffff;
   border-radius: 20px;
   padding: 5px;
-  width: 100px;
+  width: 75px;
 }
 .opacityOf{
   background: rgb(43, 70, 52);
+  transition: background-color 0.8s linear;
 }
 .opacityOn{
   background-color: rgb(43, 70, 52, 0.9) !important;
-}
-.navbar{
-  transition: color 0.8s linear 0.2s;
+  transition: background-color 0.8s linear;
 }
 .navbar-brand{
   font-weight: bold;
@@ -26,8 +25,13 @@
 .nav-link{
   font-size: 18px;
   margin: 0 5px;
+  -webkit-transition: font-size .5s ease !important;
+  transition: font-size .5s ease !important;
 }
 .nav-link:hover{
-  font-weight: bold;
+  font-size: 19px;
+  font-weight: bolder;
+}
+.navbar-brand:hover{
   text-decoration: underline;
 }

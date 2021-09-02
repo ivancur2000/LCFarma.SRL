@@ -1,0 +1,36 @@
+.animation {
+    background: linear-gradient(245deg, #135d30, #479779);
+    background-size: 600% 600%;
+
+    -webkit-animation: animationGradient 5s ease infinite;
+    -moz-animation: animationGradient 5s ease infinite;
+    animation: animationGradient 5s ease infinite;
+    color: white;
+}
+
+@-webkit-keyframes animationGradient {
+    0%{background-position:0% 81%}
+    50%{background-position:100% 20%}
+    100%{background-position:0% 81%}
+}
+@-moz-keyframes animationGradient {
+    0%{background-position:0% 81%}
+    50%{background-position:100% 20%}
+    100%{background-position:0% 81%}
+}
+@keyframes animationGradient {
+    0%{background-position:0% 81%}
+    50%{background-position:100% 20%}
+    100%{background-position:0% 81%}
+}
+.iconHome{
+    font-size: 100px;
+    margin-top: 25px;
+    background:#479779;
+    padding: 15px;
+    border-radius: 50%;
+    color: #ffff;
+}
+.homePage{
+    margin: 160px !important;
+}

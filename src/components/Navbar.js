@@ -1,27 +1,21 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 import logo from "../public/img/LOGO2.webp";
 import englishIcon from "../public/img/united-states.png";
 import spanishIcon from "../public/img/spain.png";
 import { Link } from "react-router-dom";
 
 import "../public/css/navbar.css";
+import {useGetScroll} from "../hooks/useGetScroll";
 
 
 export const Navbar = ({ changeLanguage, handleOnChange }) => {
 
-  const [scroll, setScroll] = useState();
-
-  useEffect(() => {
-    window.addEventListener('scroll', ()=>{
-      setScroll(window.scrollY);
-    });
-  }, []);
+  const scroll = useGetScroll();
 
   return (
-    <nav className={`navbar fixed-top navbar-expand-lg navbar-dark ${
+    <nav className={`navbar fixed-top navbar-expand-lg navbar-dark text-center ${
         scroll<=150?'opacityOn':
-        scroll>150&&scroll<=250?'':
-        scroll>250&&'opacityOf'
+        scroll>150&&'opacityOf'
       }` 
     }>
       <div className="container-fluid">

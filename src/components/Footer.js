@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "../public/img/LOGO2.webp";
+import {FaFacebook ,FaTwitter, FaLinkedin, FaInstagram, FaGoogle} from 'react-icons/fa';
 
 import "../public/css/footer.css";
 
@@ -14,19 +15,19 @@ export const Footer = ({ changeLanguage }) => {
         </span>
         <div>
           <a className="me-4 text-reset" href="/#">
-            <i className="fab fa-facebook"></i>
+            <FaFacebook />
           </a>
           <a className="me-4 text-reset" href="/#">
-            <i className="fab fa-twitter"></i>
+            <FaTwitter />
           </a>
           <a className="me-4 text-reset" href="/#">
-            <i className="fab fa-instagram"></i>
+            <FaInstagram />
           </a>
           <a className="me-4 text-reset" href="/#">
-            <i className="fab fa-google"></i>
+            <FaGoogle />
           </a>
           <a className="me-4 text-reset" href="/#">
-            <i className="fab fa-linkedin"></i>
+            <FaLinkedin />
           </a>
         </div>
       </section>

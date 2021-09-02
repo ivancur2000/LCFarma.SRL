@@ -1,85 +1,43 @@
 import React from "react";
-import img1 from "../public/img/farma1.webp";
-import img2 from "../public/img/farma2.webp";
-import img3 from "../public/img/farma3.webp";
+import { Carousel } from "../components/Carousel";
+import {AiOutlineMessage} from 'react-icons/ai';
+import {ImLocation} from 'react-icons/im';
 
-export const HomePage = () => {
+import "../public/css/HomePage.css";
+
+export const HomePage = ({ changeLanguage }) => {
   return (
     <>
-      <div
-        id="carouselLCFarma"
-        className="carousel carousel-dark slide"
-        data-bs-ride="carousel"
-      >
-        <div className="carousel-indicators">
-          <button
-            type="button"
-            data-bs-target="#carouselLCFarma"
-            data-bs-slide-to="0"
-            className="active"
-            aria-current="true"
-            aria-label="Slide 1"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselLCFarma"
-            data-bs-slide-to="1"
-            aria-label="Slide 2"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselLCFarma"
-            data-bs-slide-to="2"
-            aria-label="Slide 3"
-          ></button>
+      <Carousel changeLanguage={changeLanguage} />
+      <div className="vh-100">
+        <div className="animation">
+          <h1 className="text-center p-2">
+            {changeLanguage
+              ? "OUR PRODUCTS AT THE SERVICE OF YOUR HEALTH"
+              : "NUESTROS PRODUCTOS AL SERVICIO DE TU SALUD"}
+          </h1>
         </div>
-        <div className="carousel-inner">
-          <div className="carousel-item active">
-            <img
-              src={img1}
-              alt="Imagen de LCFarma"
-              className="d-block vw-100 vh-100"
-            />
-          </div>
-          <div className="carousel-item">
-            <img
-              src={img2}
-              alt="Imagen de LCFarma"
-              className="d-block vw-100 vh-100"
-            />
-          </div>
-          <div className="carousel-item">
-            <img
-              src={img3}
-              alt="Imagen de LCFarma"
-              className="d-block vw-100 vh-100"
-            />
+        <div className="text-center homePage">
+          <h1>
+            {changeLanguage
+              ? "IN CASE YOU NEED MORE INFORMATION"
+              : "EN CASO DE NECESITAR MAYOR INFORMACIÓN"}
+          </h1>
+          <div className="row">
+            <div className="row-sm col-md-6">
+              <AiOutlineMessage className='iconHome' />
+              <h1>Preguntas</h1>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa, maiores.
+              </p>
+            </div>
+            <div className="row-sm col-md-6">
+              <ImLocation className='iconHome' />
+              <h1>Direcciones</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, harum.</p>
+            </div>
           </div>
         </div>
-        <button
-          className="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselLCFarma"
-          data-bs-slide="prev"
-        >
-          <span
-            className="carousel-control-prev-icon"
-            aria-hidden="true"
-          ></span>
-          <span className="visually-hidden">Previous</span>
-        </button>
-        <button
-          className="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselLCFarma"
-          data-bs-slide="next"
-        >
-          <span
-            className="carousel-control-next-icon"
-            aria-hidden="true"
-          ></span>
-          <span className="visually-hidden">Next</span>
-        </button>
       </div>
     </>
   );

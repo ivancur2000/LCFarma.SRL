@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/static/css/main.cfa7e03b.chunk.css",
+    "main.js": "/static/js/main.a3e686b8.chunk.js",
+    "main.js.map": "/static/js/main.a3e686b8.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.4d806b1f.js",
+    "runtime-main.js.map": "/static/js/runtime-main.4d806b1f.js.map",
+    "static/css/2.b0f40361.chunk.css": "/static/css/2.b0f40361.chunk.css",
+    "static/js/2.f112ae26.chunk.js": "/static/js/2.f112ae26.chunk.js",
+    "static/js/2.f112ae26.chunk.js.map": "/static/js/2.f112ae26.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.b0f40361.chunk.css.map": "/static/css/2.b0f40361.chunk.css.map",
+    "static/css/main.cfa7e03b.chunk.css.map": "/static/css/main.cfa7e03b.chunk.css.map",
+    "static/js/2.f112ae26.chunk.js.LICENSE.txt": "/static/js/2.f112ae26.chunk.js.LICENSE.txt",
+    "static/media/LOGO2.ddc2b01c.webp": "/static/media/LOGO2.ddc2b01c.webp",
+    "static/media/farma1.15e48b38.webp": "/static/media/farma1.15e48b38.webp",
+    "static/media/farma2.1fea7acd.webp": "/static/media/farma2.1fea7acd.webp",
+    "static/media/farma3.70c9b785.webp": "/static/media/farma3.70c9b785.webp",
+    "static/media/spain.b8fdcf33.png": "/static/media/spain.b8fdcf33.png",
+    "static/media/united-states.bdcaa975.png": "/static/media/united-states.bdcaa975.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4d806b1f.js",
+    "static/css/2.b0f40361.chunk.css",
+    "static/js/2.f112ae26.chunk.js",
+    "static/css/main.cfa7e03b.chunk.css",
+    "static/js/main.a3e686b8.chunk.js"
+  ]
+}

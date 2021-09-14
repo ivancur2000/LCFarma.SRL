@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^12.1.10",
     "animate.css": "^4.1.1",
     "bootstrap": "^5.1.0",
+    "firebase": "^9.0.2",
     "popper": "^1.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -16,6 +17,7 @@
     "react-scripts": "4.0.3",
     "web-vitals": "^1.0.1"
   },
+  "homepage": "http://lcpharmabolivia.com/",	
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import img1 from "../public/img/farma1.webp";
 import img2 from "../public/img/farma2.webp";
 import img3 from "../public/img/farma3.webp";
@@ -39,3 +40,6 @@ export const Carousel = ({changeLanguage}) => {
     </div>
   );
 };
+Carousel.propTypes = {
+  changeLanguage: PropTypes.bool.isRequired
+}

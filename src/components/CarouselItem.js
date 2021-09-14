@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 export const CarouselItem = ({ img, active, changeLanguage }) => {
   return (
@@ -30,17 +31,19 @@ export const CarouselItem = ({ img, active, changeLanguage }) => {
             </p>
           </div>
           <div className="col-md-4 item-caption3">
-            <h5>{changeLanguage?'Quality':'Calidad'}</h5>
+            <h5>{changeLanguage ? "Quality" : "Calidad"}</h5>
             <p>
-              {
-                changeLanguage
-                ? 'An ISO 9001-2008 certificate that strictly follows industrial guidelines according to international standards'
-                : 'Un certificado ISO 9001-2008 que sigue estrictamente las directrices industriales según las normas internacionales'
-              }
+              {changeLanguage
+                ? "An ISO 9001-2008 certificate that strictly follows industrial guidelines according to international standards"
+                : "Un certificado ISO 9001-2008 que sigue estrictamente las directrices industriales según las normas internacionales"}
             </p>
           </div>
         </div>
       </div>
     </div>
   );
+};
+CarouselItem.propTypes = {
+  img: PropTypes.string.isRequired,
+  changeLanguage: PropTypes.bool.isRequired,
 };

@@ -1,0 +1,17 @@
+.textHistory{
+  text-align: justify;
+  z-index:2;
+}
+h3{
+  color: rgb(46, 90, 84);
+  text-decoration: underline;
+}
+.bgLcFarma{
+  opacity: 0.2;
+  position: absolute;
+  z-index:1;
+}
+.imgColaborator{
+  width: 150px;
+  height: 75px;
+}

@@ -1,0 +1,14 @@
+.imageCert{
+  width: 200px;
+  height: 300px;
+}
+.modalImage{
+  width:500px;
+  height: 600px;
+}
+@media screen and (max-width: 800px) {
+  .modalImage{
+    width: 300px;
+    height: 400px
+  }
+}

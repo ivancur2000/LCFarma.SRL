@@ -1,6 +1,14 @@
 import React from "react";
+import PropTypes from "prop-types";
+import { Login } from "../views/Login";
 import logo from "../public/img/LOGO2.webp";
-import {FaFacebook ,FaTwitter, FaLinkedin, FaInstagram, FaGoogle} from 'react-icons/fa';
+import {
+  FaFacebook,
+  FaTwitter,
+  FaLinkedin,
+  FaInstagram,
+  FaGoogle,
+} from "react-icons/fa";
 
 import "../public/css/footer.css";
 
@@ -51,10 +59,16 @@ export const Footer = ({ changeLanguage }) => {
                 {changeLanguage ? "About:" : "Acerca de:"}
               </h6>
               <p>
-                <a className="text-reset" href="/#">
-                  {changeLanguage ? "Us" : "Nosotros"}
-                </a>
+                <button
+                  type="button"
+                  className="btn btn-dark"
+                  data-bs-toggle="modal"
+                  data-bs-target="#login"
+                >
+                  {changeLanguage ? "Login" : "Ingresar"}
+                </button>
               </p>
+              <Login />
               <p>
                 <a className="text-reset" href="/#">
                   {changeLanguage
@@ -74,8 +88,7 @@ export const Footer = ({ changeLanguage }) => {
                 {changeLanguage ? "Contact" : "Contacto"}
               </h6>
               <p>
-                <i className="fas fa-home me-3"></i>La Paz-Bolivia: Av. Francia
-                calle 21 No. 200 Zona Achumani
+                <i className="fas fa-home me-3"></i>La Paz-Cochabamba-Santa Cruz
               </p>
               <p>
                 <i className="fas fa-mobile me-3"></i>Cel: 707 79387
@@ -100,4 +113,7 @@ export const Footer = ({ changeLanguage }) => {
       </div>
     </footer>
   );
+};
+Footer.propTypes = {
+  changeLanguage: PropTypes.bool.isRequired,
 };

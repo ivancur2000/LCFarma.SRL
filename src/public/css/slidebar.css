@@ -1,0 +1,21 @@
+.slidebar{
+  background-color: #377968;
+}
+.slideBtn{
+  background-color: rgb(38, 145, 109) !important;
+  text-align: center;
+}
+.slideBtn:hover{
+  background-color: rgb(55, 173, 134) !important;
+}
+.slideBtn a{
+  color: #ffff;
+  text-decoration: none;
+}
+.slideBtn a:hover{
+  color: #ffff;
+  text-decoration: none;
+}
+.slide{
+  background-color: rgb(48, 90, 65) !important;
+}

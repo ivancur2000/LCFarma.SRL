@@ -3,9 +3,9 @@ import logo from "../public/img/LOGO2.webp";
 import englishIcon from "../public/img/united-states.png";
 import spanishIcon from "../public/img/spain.png";
 import { Link } from "react-router-dom";
+import {useGetScroll} from "../hooks/useGetScroll";
 
 import "../public/css/navbar.css";
-import {useGetScroll} from "../hooks/useGetScroll";
 
 
 export const Navbar = ({ changeLanguage, handleOnChange }) => {
@@ -42,24 +42,24 @@ export const Navbar = ({ changeLanguage, handleOnChange }) => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link active" to="/#">
+              <Link className="nav-link active" to="/aboutus">
                 {changeLanguage ? "About Us" : `Sobre nosotros`}
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link active" to="/#">
+              <Link className="nav-link active" to="/catalogue">
                 {changeLanguage ? "Catalogue" : "Catálogo"}
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link active" to="/#">
+              <Link className="nav-link active" to="/business">
                 {changeLanguage
                   ? "Business Development"
                   : "Desarrollo de negocios"}
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link active" to="/#">
+              <Link className="nav-link active" to="/location">
                 {changeLanguage ? "Location" : "Ubicación"}
               </Link>
             </li>

@@ -35,3 +35,19 @@
 .navbar-brand:hover{
   text-decoration: underline;
 }
+.sticky{
+  height: 80px
+}
+.title{
+  background-color: rgb(55, 126, 87);
+  color: rgb(241, 241, 241);
+  padding: 10px;
+  text-align: center;
+}
+h4{
+  color: rgb(92, 148, 111);
+}
+.imgModal{
+  width: 250px;
+  height: 250px;
+}

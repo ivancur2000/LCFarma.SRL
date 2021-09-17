@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
-import img1 from "../public/img/farma1.webp";
-import img2 from "../public/img/farma2.webp";
-import img3 from "../public/img/farma3.webp";
+import img1 from "../public/img/farma1.jpg";
+import img2 from "../public/img/farma2.jpg";
+import img3 from "../public/img/farma3.jpg";
 import { CarouselItem } from "./CarouselItem";
 
 import "../public/css/carousel.css";

@@ -1,6 +1,6 @@
 import React from "react";
 import { ModalProduct } from "../components/ModalProduct";
-import farmaco from "../public/img/farmaco.webp"
+import farmaco from "../public/img/farmaco.jpg"
 
 export const CataloguePage = () => {
   return (

@@ -1,9 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
-import logo from "../public/img/LOGO3.webp";
-import ankur from "../public/img/ANKUR.webp";
-import globela from "../public/img/globela.webp";
-import indogulf from "../public/img/indogulf.webp";
+import logo from "../public/img/LOGO3.png";
+import ankur from "../public/img/ANKUR.jpg";
+import globela from "../public/img/globela.jpg";
+import indogulf from "../public/img/indogulf.jpg";
 
 import "../public/css/about.css";
 

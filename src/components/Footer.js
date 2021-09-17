@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Login } from "../views/Login";
-import logo from "../public/img/LOGO2.webp";
+import { Link } from "react-router-dom";
+import logo from "../public/img/LOGO2.png";
 import {
   FaFacebook,
   FaTwitter,
@@ -22,7 +22,11 @@ export const Footer = ({ changeLanguage }) => {
             : "Contáctanos con nuestas redes sociales:"}
         </span>
         <div>
-          <a className="me-4 text-reset" href="/#">
+          <a
+            className="me-4 text-reset"
+            href="https://www.facebook.com/Distribuidora-LC-Farma-SRL-106545520952097"
+            target="_blank"
+          >
             <FaFacebook />
           </a>
           <a className="me-4 text-reset" href="/#">
@@ -59,16 +63,10 @@ export const Footer = ({ changeLanguage }) => {
                 {changeLanguage ? "About:" : "Acerca de:"}
               </h6>
               <p>
-                <button
-                  type="button"
-                  className="btn btn-dark"
-                  data-bs-toggle="modal"
-                  data-bs-target="#login"
-                >
+                <Link to="/login" className="text-reset">
                   {changeLanguage ? "Login" : "Ingresar"}
-                </button>
+                </Link>
               </p>
-              <Login />
               <p>
                 <a className="text-reset" href="/#">
                   {changeLanguage

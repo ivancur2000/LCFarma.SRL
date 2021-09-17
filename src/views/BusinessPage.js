@@ -1,5 +1,5 @@
 import React from "react";
-import certificado from "../public/img/ImageFetchCertificacion.webp";
+import certificado from "../public/img/ImageFetchCertificacion.jpg";
 import "../public/css/business.css";
 
 export const BusinessPage = () => {

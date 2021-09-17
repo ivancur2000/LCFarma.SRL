@@ -6,7 +6,6 @@ export const useChangeLanguage = () => {
   const handleOnChange = (e)=>{
     setChangeLanguage(e.target.checked);
   }
-
   return{
     changeLanguage,
     handleOnChange

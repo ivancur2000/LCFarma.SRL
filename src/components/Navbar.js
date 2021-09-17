@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../public/img/LOGO2.webp";
+import logo from "../public/img/LOGO2.png";
 import englishIcon from "../public/img/united-states.png";
 import spanishIcon from "../public/img/spain.png";
 import { Link } from "react-router-dom";

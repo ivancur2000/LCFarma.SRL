@@ -11,9 +11,9 @@ export const Login = ({ changeLanguage }) => {
 
   const { email, password } = form;
 
-  const [error, handleOnLogin] = useLogin(email, password);
+  const [error, handleOnLogin, loading] = useLogin(email, password);
 
-  const { errorEmail, errorPassword, errorFields } = error;
+  const { errorEmail, errorPassword, errorFields, errorUser, success } = error;
 
   return (
     <>
@@ -27,7 +27,7 @@ export const Login = ({ changeLanguage }) => {
             <input
               type="text"
               name="email"
-              className="form-control"
+              className="form-control loginInput"
               id="email"
               value={email}
               onChange={handleOnChange}
@@ -40,14 +40,14 @@ export const Login = ({ changeLanguage }) => {
             <input
               type="password"
               name="password"
-              className="form-control"
+              className="form-control loginInput"
               id="password"
               value={password}
               onChange={handleOnChange}
             />
           </div>
           {errorEmail && (
-            <p className="alert alert-danger animate__animated animate__animate__backOutDown animate__delay-3s">
+            <p className="alert alert-danger">
               {changeLanguage ? "Invalid Email" : "Correo inválido"}
             </p>
           )}
@@ -63,19 +63,34 @@ export const Login = ({ changeLanguage }) => {
                 : "No puede dejar campos vacios"}
             </p>
           )}
+          {errorUser && (
+            <p className="alert alert-danger">
+              {changeLanguage ? "Unregistered Email" : "Correo no registrado"}
+            </p>
+          )}
+          {success && (
+            <p className="alert alert-success">
+              {changeLanguage ? "Successful entry" : "Ingreso Exitoso"}
+            </p>
+          )}
+          {loading && (
+            <div role="status" className="spinner-border d-block mx-auto my-3">
+              <span className="visually-hidden">Loading...</span>
+            </div>
+          )}
           <button
-            className="btn btn-success mx-2"
+            className="btn btnSignIn mx-2"
             type="button"
             onClick={handleOnLogin}
           >
-            {changeLanguage ? "Login" : "Ingresar"}
+            {changeLanguage ? "Sign In" : "Ingresar"}
           </button>
           <button
-            className="btn btn-danger mx-2"
+            className="btn btnClear mx-2"
             type="button"
             onClick={handleOnClear}
           >
-            {changeLanguage ? "Cancel" : "Cancelar"}
+            {changeLanguage ? "Clear" : "Limpiar"}
           </button>
         </div>
       </div>

@@ -8,46 +8,87 @@ export const useLogin = (email, password) => {
     errorEmail: false,
     errorPassword: false,
     errorFields: false,
+    errorUser: false,
+    success: false,
   });
+
+  const [loading, setLoading] = useState(false);
 
   const history = useHistory();
 
   const handleOnLogin = () => {
     const auth = getAuth(app);
-
+    setLoading(true);
     if (email.trim() && password.trim()) {
-
       signInWithEmailAndPassword(auth, email, password)
-
         .then((credentials) => {
           const { accessToken } = credentials.user;
 
           localStorage.setItem("token", accessToken);
 
+          setLoading(false);
+
           setError({
             errorEmail: false,
             errorPassword: false,
             errorFields: false,
+            errorUser: false,
+            success: true,
           });
 
-          history.push("/home");
-          window.location.reload();
+          setTimeout(() => {
+            history.push("/home");
+            window.location.reload();
+          }, 1500);
         })
         .catch((err) => {
+          setLoading(false);
+
           switch (err.code) {
             case "auth/invalid-email":
-              setError({ ...error, errorEmail: true });
+              setError({
+                errorUser: false,
+                errorPassword: false,
+                errorFields: false,
+                errorEmail: true,
+                success: false,
+              });
               break;
+
             case "auth/wrong-password":
-              setError({ ...error, errorPassword: true });
+              setError({
+                errorUser: false,
+                errorPassword: true,
+                errorFields: false,
+                errorEmail: false,
+                success: false,
+              });
+              break;
+
+            case "auth/user-not-found":
+              setError({
+                errorUser: true,
+                errorPassword: false,
+                errorFields: false,
+                errorEmail: false,
+                success: false,
+              });
+              break;
             default:
               break;
           }
         });
     } else {
-      setError({ ...error, errorFields: true });
+      setLoading(false);
+      setError({
+        errorUser: false,
+        errorPassword: false,
+        errorFields: true,
+        errorEmail: false,
+        success: false,
+      });
     }
   };
 
-  return [error, handleOnLogin];
+  return [error, handleOnLogin, loading];
 };

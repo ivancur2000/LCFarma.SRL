@@ -16,7 +16,6 @@ import "../public/css/slidebar.css";
 
 export const SlideBar = () => {
   const history = useHistory();
-
   const auth = getAuth(app);
 
   const [emailUser, setEmailUser] = useState("");
@@ -29,7 +28,6 @@ export const SlideBar = () => {
 
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
-      console.log(user.email);
       if (user) {
         setEmailUser(user.email);
       } else {

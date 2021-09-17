@@ -1,6 +1,30 @@
-.bgLogin{
-  background-image: url('../img/farma3.jpg');
+.bgLogin {
+  background-image: url("../img/farma3.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+.login{
+  background-color: rgb(0, 0, 0, 0.8);
+  padding: 25px !important;
+  border-radius: 40px;
+  color: #ffff
+}
+.loginInput{
+  background: rgb(72, 79, 80, 0.5) !important;
+  color: #ffff !important;
+}
+.btnSignIn{
+  background-color: rgb(0, 0, 0, 0.8) !important;
+  color: #ffff !important;
+}
+.btnSignIn:hover{
+  background-color: rgb(56, 59, 61, 0.8) !important;
+}
+.btnClear{
+  background-color: rgb(56, 38, 85, 0.8) !important;
+  color: #ffff !important;
+}
+.btnClear:hover{
+  background-color: rgb(80, 75, 111, 0.9) !important;
 }

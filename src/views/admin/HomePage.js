@@ -3,15 +3,15 @@ import { useSession } from "../../hooks/useSession";
 import "../../public/css/homeAdmin.css";
 
 export const HomeAdmin = () => {
-  const [user] = useSession();
+  const [userSession] = useSession();
 
-  const { displayName, emailUser } = user;
-console.log(user);
+  const { user, email } = userSession;
+
   return (
     <div className="max-vw-100">
       <div className="imageAdmin mw-75 text-center py-3 mb-3 row mx-0">
         <div className="container col-6 align-self-center presentAdmin">
-          <h1>Bienvenido {user.emailUser}</h1>
+          <h1>Bienvenido {user ? user : email}</h1>
           <p>
             Como administrador de este sitio web tu podrás modificar a tu gusto
             el contenido de la mismo. Podrás modificar tu catálogo de productos,

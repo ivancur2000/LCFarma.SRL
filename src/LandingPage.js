@@ -18,12 +18,10 @@ export const LandingPage = () => {
       {token ? (
         <AdminNavbar />
       ) : (
-        <>
-          <Navbar
-            handleOnChange={handleOnChange}
-            changeLanguage={changeLanguage}
-          />
-        </>
+        <Navbar
+          handleOnChange={handleOnChange}
+          changeLanguage={changeLanguage}
+        />
       )}
       <Routes changeLanguage={changeLanguage} />
       {!token ? <Footer changeLanguage={changeLanguage} /> : <AdminFooter />}

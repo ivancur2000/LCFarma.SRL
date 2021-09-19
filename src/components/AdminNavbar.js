@@ -6,9 +6,9 @@ import { useSession } from "../hooks/useSession";
 import "../public/css/slidebar.css";
 
 export const AdminNavbar = () => {
-  const [user, handleCloseSession] = useSession();
+  const [userSession, handleCloseSession] = useSession();
 
-  const { displayName, emailUser } = user;
+  const { user, email } = userSession;
 
   return (
     <>
@@ -34,7 +34,7 @@ export const AdminNavbar = () => {
                 href="/#"
               >
                 <FaUser className="fs-4 m-2" />
-                {displayName !== null ? emailUser : displayName}
+                {user ? user : email}
               </a>
               <ul
                 className="dropdown-menu dropdown-menu-dark"

@@ -25,6 +25,7 @@ export const Footer = ({ changeLanguage }) => {
           <a
             className="me-4 text-reset"
             href="https://www.facebook.com/Distribuidora-LC-Farma-SRL-106545520952097"
+            rel="noreferrer"
             target="_blank"
           >
             <FaFacebook />

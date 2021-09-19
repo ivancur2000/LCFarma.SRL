@@ -44,7 +44,7 @@ export const Routes = ({ changeLanguage }) => {
       <Route
         path="/home"
         render={() => {
-          return token ? <HomeAdmin /> : <HomePage />;
+          return token ? <HomeAdmin /> : <HomePage changeLanguage={changeLanguage} />;
         }}
         exact
       />

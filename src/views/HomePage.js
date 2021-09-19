@@ -1,12 +1,21 @@
-import React from "react";
+import React, {useEffect} from "react";
 import PropTypes from 'prop-types';
 import { Carousel } from "../components/Carousel";
 import { AiOutlineMessage } from "react-icons/ai";
 import { ImLocation } from "react-icons/im";
-
+import {useHistory} from "react-router-dom";
 import "../public/css/HomePage.css";
 
 export const HomePage = ({ changeLanguage }) => {
+  
+  const token = localStorage.getItem('token');
+  const history = useHistory();
+
+  useEffect(()=>{
+    if(token){
+      history.push('/home');
+    }
+  }, [token,history])
   return (
     <>
       <Carousel changeLanguage={changeLanguage} />

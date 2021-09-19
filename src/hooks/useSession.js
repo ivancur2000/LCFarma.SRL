@@ -18,7 +18,11 @@ export const useSession = () => {
   useEffect(() => {
     onAuthStateChanged(auth, (userCurrent) => {
       if (userCurrent) {
-        setUser(userCurrent);
+        setUser({
+          email: userCurrent.email,
+          user: userCurrent.displayName,
+          verify: userCurrent.emailVerified,
+        });
       } 
     });
   }, [auth]);

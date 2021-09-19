@@ -7,7 +7,7 @@ export const AdminFooter = () => {
       <div className="container px-5">
         <p className="m-0 text-center text-light">
           <img src={Logo} alt="Logo" className="bg-light rounded p-1 imageFooter" />
-          Farma 2021 Todos los derechos reservados
+          Farma @2021 Todos los derechos reservados
         </p>
       </div>
     </div>

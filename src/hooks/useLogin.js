@@ -9,6 +9,7 @@ export const useLogin = (email, password) => {
     errorPassword: false,
     errorFields: false,
     errorUser: false,
+    errorConnection: false,
     success: false,
   });
 
@@ -33,6 +34,7 @@ export const useLogin = (email, password) => {
             errorPassword: false,
             errorFields: false,
             errorUser: false,
+            errorConnection: false,
             success: true,
           });
 
@@ -51,6 +53,7 @@ export const useLogin = (email, password) => {
                 errorPassword: false,
                 errorFields: false,
                 errorEmail: true,
+                errorConnection: false,
                 success: false,
               });
               break;
@@ -61,6 +64,7 @@ export const useLogin = (email, password) => {
                 errorPassword: true,
                 errorFields: false,
                 errorEmail: false,
+                errorConnection: false,
                 success: false,
               });
               break;
@@ -71,10 +75,19 @@ export const useLogin = (email, password) => {
                 errorPassword: false,
                 errorFields: false,
                 errorEmail: false,
+                errorConnection: false,
                 success: false,
               });
               break;
             default:
+              setError({
+                errorUser: false,
+                errorPassword: false,
+                errorFields: false,
+                errorEmail: false,
+                errorConnection: true,
+                success: false,
+              });
               break;
           }
         });
@@ -85,6 +98,7 @@ export const useLogin = (email, password) => {
         errorPassword: false,
         errorFields: true,
         errorEmail: false,
+        errorConnection: false,
         success: false,
       });
     }

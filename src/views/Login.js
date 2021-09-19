@@ -13,7 +13,14 @@ export const Login = ({ changeLanguage }) => {
 
   const [error, handleOnLogin, loading] = useLogin(email, password);
 
-  const { errorEmail, errorPassword, errorFields, errorUser, success } = error;
+  const {
+    errorEmail,
+    errorPassword,
+    errorFields,
+    errorUser,
+    errorConnection,
+    success,
+  } = error;
 
   return (
     <>
@@ -68,6 +75,12 @@ export const Login = ({ changeLanguage }) => {
               {changeLanguage ? "Unregistered Email" : "Correo no registrado"}
             </p>
           )}
+          {errorConnection && (
+            <p className="alert alert-danger">
+              {changeLanguage ? "Unregistered Email" : "Verifica tu conexión a internet"}
+            </p>
+          )}
+
           {success && (
             <p className="alert alert-success">
               {changeLanguage ? "Successful entry" : "Ingreso Exitoso"}

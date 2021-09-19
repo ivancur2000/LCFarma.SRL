@@ -13,6 +13,7 @@
 .loginInput{
   background: rgb(72, 79, 80, 0.5) !important;
   color: #ffff !important;
+  border: transparent !important;
 }
 .btnSignIn{
   background-color: rgb(0, 0, 0, 0.8) !important;

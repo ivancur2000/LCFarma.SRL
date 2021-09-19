@@ -1,10 +1,11 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Navbar } from "./components/Navbar";
 import { BrowserRouter } from "react-router-dom";
 import { Routes } from "./routes/Routes";
 import { Footer } from "./components/Footer";
 import { useChangeLanguage } from "./hooks/useChangeLanguage";
-import { SlideBar } from "./components/SlideBar";
+import { AdminNavbar } from "./components/AdminNavbar";
+import { AdminFooter } from "./components/AdminFooter";
 import { ScrollToTop } from "./helpers/ScrollToTop";
 
 export const LandingPage = () => {
@@ -15,7 +16,7 @@ export const LandingPage = () => {
     <BrowserRouter>
       <ScrollToTop />
       {token ? (
-        <SlideBar />
+        <AdminNavbar />
       ) : (
         <>
           <Navbar
@@ -25,7 +26,7 @@ export const LandingPage = () => {
         </>
       )}
       <Routes changeLanguage={changeLanguage} />
-      {!token && <Footer changeLanguage={changeLanguage} />}
+      {!token ? <Footer changeLanguage={changeLanguage} /> : <AdminFooter />}
     </BrowserRouter>
   );
 };

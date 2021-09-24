@@ -33,8 +33,8 @@ export const HomePage = ({ changeLanguage }) => {
               ? "IN CASE YOU NEED MORE INFORMATION"
               : "EN CASO DE NECESITAR MAYOR INFORMACIÓN"}
           </h1>
-          <div className="row w-100 text-center">
-            <div className="row-sm w-sm-75 w-md-50 col-md-6">
+          <div className="row w-100 justify-content-center">
+            <div className="col-md-4 mx-auto">
               <AiOutlineMessage className="iconHome" />
               <h1>{changeLanguage ? "Questions" : "Preguntas"}</h1>
               <p className='fs-4'>
@@ -43,7 +43,7 @@ export const HomePage = ({ changeLanguage }) => {
                   : "Envíanos tus principales dudas, estamos atentos a responder."}
               </p>
             </div>
-            <div className="row-sm col-md-6">
+            <div className="col-md-4 mx-auto">
               <ImLocation className="iconHome" />
               <h1>{changeLanguage ? "Address" : "Direcciones"}</h1>
               <p className="fs-4">

@@ -9,6 +9,9 @@ import { NotFoundPage } from "../views/NotFoundPage";
 import { Login } from "../views/Login";
 import { HomeAdmin } from "../views/admin/HomePage";
 import { PerfilUser } from "../views/admin/PerfilUser";
+import { InfoLcfarma } from "../views/admin/InfoLcfarma";
+import { Certificade } from "../views/admin/Certificade";
+import { TermsAndConditions } from "../views/TermsAndConditions";
 
 export const Routes = ({ changeLanguage }) => {
   const token = localStorage.getItem("token");
@@ -25,10 +28,13 @@ export const Routes = ({ changeLanguage }) => {
         <CataloguePage changeLanguage={changeLanguage} />
       </Route>
       <Route path="/business" exact>
-        <BusinessPage />
+        <BusinessPage changeLanguage={changeLanguage} />
       </Route>
       <Route path="/location" exact>
         <LocationPage />
+      </Route>
+      <Route path="/termsCon" exact>
+        <TermsAndConditions changeLanguage={changeLanguage} />
       </Route>
       <Route
         path="/login"
@@ -44,14 +50,44 @@ export const Routes = ({ changeLanguage }) => {
       <Route
         path="/home"
         render={() => {
-          return token ? <HomeAdmin /> : <HomePage changeLanguage={changeLanguage} />;
+          return token ? (
+            <HomeAdmin />
+          ) : (
+            <HomePage changeLanguage={changeLanguage} />
+          );
         }}
         exact
       />
       <Route
         path="/perfil"
         render={() => {
-          return token ? <PerfilUser /> : <HomePage />;
+          return token ? (
+            <PerfilUser />
+          ) : (
+            <HomePage changeLanguage={changeLanguage} />
+          );
+        }}
+        exact
+      />
+      <Route
+        path="/info"
+        render={() => {
+          return token ? (
+            <InfoLcfarma />
+          ) : (
+            <HomePage changeLanguage={changeLanguage} />
+          );
+        }}
+        exact
+      />
+      <Route
+        path="/certificade"
+        render={() => {
+          return token ? (
+            <Certificade />
+          ) : (
+            <HomePage changeLanguage={changeLanguage} />
+          );
         }}
         exact
       />

@@ -2,6 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import logo from "../public/img/LOGO2.png";
+import { AiFillHome, AiFillPhone } from "react-icons/ai";
+import { RiCellphoneFill } from "react-icons/ri";
+import { MdEmail } from "react-icons/md";
 import {
   FaFacebook,
   FaTwitter,
@@ -69,16 +72,16 @@ export const Footer = ({ changeLanguage }) => {
                 </Link>
               </p>
               <p>
-                <a className="text-reset" href="/#">
+                <Link className="text-reset" to="/termsCon">
                   {changeLanguage
                     ? "Terms and Conditions"
                     : "Términos y condiciones"}
-                </a>
+                </Link>
               </p>
               <p>
-                <a className="text-reset" href="/#">
+                <Link className="text-reset" to="/catalogue">
                   {changeLanguage ? "Product catalog" : "Catálogo de productos"}
-                </a>
+                </Link>
               </p>
             </div>
 
@@ -87,17 +90,20 @@ export const Footer = ({ changeLanguage }) => {
                 {changeLanguage ? "Contact" : "Contacto"}
               </h6>
               <p>
-                <i className="fas fa-home me-3"></i>La Paz-Cochabamba-Santa Cruz
+                <AiFillHome className="me-3" />
+                La Paz-Cochabamba-Santa Cruz
               </p>
               <p>
-                <i className="fas fa-mobile me-3"></i>Cel: 707 79387
+                <RiCellphoneFill className="me-3" />
+                Cel: 707 79387
               </p>
               <p>
-                <i className="fas fa-phone me-3"></i>
+                <AiFillPhone className="me-3" />
                 {changeLanguage ? "Phone" : "Fono"}: (+591) 2713644 - 2713268
               </p>
               <p>
-                <i className="fas fa-envelope me-3"></i>Email:
+                <MdEmail />
+                Email:
                 gerenciageneral@lcpharmabolivia.com
               </p>
             </div>

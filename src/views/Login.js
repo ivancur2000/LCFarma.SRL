@@ -8,11 +8,8 @@ export const Login = ({ changeLanguage }) => {
     email: "",
     password: "",
   });
-
   const { email, password } = form;
-
   const [error, handleOnLogin, loading] = useLogin(email, password);
-
   const {
     errorEmail,
     errorPassword,
@@ -24,7 +21,7 @@ export const Login = ({ changeLanguage }) => {
 
   return (
     <>
-      <div className="bgLogin container-fluid row pt-5 vh-100 m-0 p-0">
+      <div className="bgLogin container-fluid row pt-5 min-vh-100 m-0 p-0">
         <div className="login col-md-5 col-sm-7 col-12 align-self-center mx-auto">
           <h1>Login</h1>
           <div className="mb-3">

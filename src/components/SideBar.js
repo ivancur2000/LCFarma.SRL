@@ -34,18 +34,18 @@ export const SideBar = () => {
               <BiHomeAlt />
               Inicio
             </Link>
-            <button className="nav-link slideBtn active mt-3">
+            <Link to="/info" className="nav-link slideBtn active mt-3">
               <FaPlaceOfWorship />
               Información de la empresa
-            </button>
+            </Link>
             <button className="nav-link slideBtn active mt-3">
               <FaProductHunt />
               Productos
             </button>
-            <button className="nav-link slideBtn active mt-3">
+            <Link to="/certificade" className="nav-link slideBtn active mt-3">
               <MdBusinessCenter />
               Certificados
-            </button>
+            </Link>
             <button className="nav-link slideBtn active mt-3">
               <BsFillQuestionCircleFill />
               Preguntas Frecuentes

@@ -16,7 +16,7 @@ export const AdminNavbar = () => {
         <div className="w-100">
           <ul className="navbar-nav row-md justify-content-between">
             <a
-              className="nav-item bars p-2 m-2 col-md-1"
+              className="nav-item bars p-2 m-2 col-1"
               role="button"
               data-bs-toggle="offcanvas"
               href="/#slidebar"
@@ -24,7 +24,7 @@ export const AdminNavbar = () => {
             >
               <FaBars className="text-light fs-4" />
             </a>
-            <li className="nav-item dropdown col-md-4">
+            <li className="nav-item dropdown col-2">
               <a
                 role="button"
                 className="nav-link dropdown-toggle"

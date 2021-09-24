@@ -10,7 +10,7 @@ export const HomeAdmin = () => {
   return (
     <div className="max-vw-100">
       <div className="imageAdmin mw-75 text-center py-3 mb-3 row mx-0">
-        <div className="container col-6 align-self-center presentAdmin">
+        <div className="container col-md-6 align-self-center presentAdmin">
           <h1>Bienvenido {user ? user : email}</h1>
           <p>
             Como administrador de este sitio web tu podrás modificar a tu gusto

@@ -1,6 +1,6 @@
 import React from "react";
 import { Navbar } from "./components/Navbar";
-import { BrowserRouter } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import { Routes } from "./routes/Routes";
 import { Footer } from "./components/Footer";
 import { useChangeLanguage } from "./hooks/useChangeLanguage";
@@ -13,7 +13,7 @@ export const LandingPage = () => {
   const token = localStorage.getItem("token");
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <ScrollToTop />
       {token ? (
         <AdminNavbar />
@@ -25,6 +25,6 @@ export const LandingPage = () => {
       )}
       <Routes changeLanguage={changeLanguage} />
       {!token ? <Footer changeLanguage={changeLanguage} /> : <AdminFooter />}
-    </BrowserRouter>
+    </HashRouter>
   );
 };

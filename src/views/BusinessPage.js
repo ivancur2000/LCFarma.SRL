@@ -1,10 +1,12 @@
 import React from "react";
-import certificado from "../public/img/ImageFetchCertificacion.jpg";
 import "../public/css/business.css";
 import { useSetDataInfo } from "../hooks/useSetDataInfo";
+import { useGetImages } from "../hooks/useGetImages";
 
 export const BusinessPage = ({ changeLanguage }) => {
   const [info] = useSetDataInfo();
+  const url = useGetImages();
+
   return (
     <>
       <div className="sticky title"></div>
@@ -24,30 +26,32 @@ export const BusinessPage = ({ changeLanguage }) => {
       <div className="m-5">
         <h4>{changeLanguage ? "Certificates" : "Certificados"}</h4>
         <div className="row">
-          <div className="col-4">
-            <div data-bs-toggle="modal" data-bs-target="#modalCertificade">
-              <img
-                src={certificado}
-                alt="certificado"
-                className="m-3 imageCert"
-              />
-            </div>
-            <div
-              className="modal fade"
-              tabIndex="-1"
-              id="modalCertificade"
-              aria-labelledby="modal"
-              aria-hidden="true"
-            >
-              <div className="modal-dialog">
+          {url.map((img, index) => (
+            <div key={index} className="col-md-4">
+              <div data-bs-toggle="modal" data-bs-target="#modalCertificade">
                 <img
-                  src={certificado}
+                  src={img.urlDir}
                   alt="certificado"
-                  className="modalImage m-auto"
+                  className="m-3 imageCert mx-auto"
                 />
               </div>
+              <div
+                className="modal fade"
+                tabIndex="-1"
+                id="modalCertificade"
+                aria-labelledby="modal"
+                aria-hidden="true"
+              >
+                <div className="modal-dialog">
+                  <img
+                    src={img.urlDir}
+                    alt="certificado"
+                    className="modalImage m-auto"
+                  />
+                </div>
+              </div>
             </div>
-          </div>
+          ))}
         </div>
       </div>
     </>

@@ -1,25 +1,17 @@
-import React, { useState } from "react";
-import { storage } from "../../firebaseConfig";
-import { ref } from "firebase/storage";
+import React from "react";
+import { useGetImages } from "../../hooks/useGetImages";
+import { useUploadImage } from "../../hooks/useUploadImage";
 
 export const Certificade = () => {
-  const [file, setFile] = useState({});
-  const handleOnChange = ({ target }) => {
-    if (target.files[0]) {
-      setFile(target.files[0]);
-    }
-  };
-
-  console.log(file);
-
-  const handleOnUpload = () => {
-  
-  };
+  const [state, handleOnChange, handleOnUpload, handleDeleteFile] =
+    useUploadImage();
+  const url = useGetImages();
 
   return (
     <>
       <h1 className="text-center">Lista de certificados</h1>
-      <div className="container row m-0 my-5">
+      <hr />
+      <div className="container row mx-auto my-5">
         <input
           type="file"
           name="certificade"
@@ -34,9 +26,26 @@ export const Certificade = () => {
         >
           Subir Certificado
         </button>
+        {state.error.trim() && <p>{state.error}</p>}
+        {state.success.trim() && <p>{state.success}</p>}
       </div>
-      <div className="container row m-0 min-vh-100">
-        <div></div>
+      <div className="container row mx-auto my-4 min-vh-100">
+        {url.map((img, index) => (
+          <div key={index} className="col-md-4 col px-4">
+            <img
+              className="my-1 imageCert row mx-auto"
+              src={img.urlDir}
+              alt={img.pathRef}
+            />
+            <button
+              className="row btn btn-danger mx-auto"
+              onClick={() => handleDeleteFile(img.pathRef)}
+              type="button"
+            >
+              Borrar Imagen
+            </button>
+          </div>
+        ))}
       </div>
     </>
   );

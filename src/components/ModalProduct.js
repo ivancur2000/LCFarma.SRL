@@ -1,19 +1,53 @@
-import React from "react";
-import {GiHealthNormal} from "react-icons/gi";
-export const ModalProduct = ({ img, changeLanguage }) => {
+import React, { useEffect, useState } from "react";
+import { doc, getDoc } from "@firebase/firestore";
+import { GiHealthNormal } from "react-icons/gi";
+import { db } from "../firebaseConfig";
+import { Image } from "../components/Image";
+
+export const ModalProduct = ({ name, changeLanguage }) => {
+  const [data, setData] = useState({
+    prinActive: [],
+    prinActiveTran: [],
+    dosage: "",
+    dosageTran: "",
+    treatment: "",
+    treatmentTran: "",
+    img: "",
+  });
+
+  useEffect(() => {
+    const docRef = doc(db, "product", name);
+    getDoc(docRef).then(({ _document }) => {
+      const dataFetch = _document.data.value.mapValue.fields;
+      setData({
+        prinActive: dataFetch.prinActive.arrayValue.values
+          ? dataFetch.prinActive.arrayValue.values
+          : [],
+        prinActiveTran: dataFetch.prinActiveTran.arrayValue.values
+          ? dataFetch.prinActiveTran.arrayValue.values
+          : [],
+        dosage: dataFetch.dosage.stringValue,
+        dosageTran: dataFetch.dosageTran.stringValue,
+        treatment: dataFetch.treatment.stringValue,
+        treatmentTran: dataFetch.treatmentTran.stringValue,
+        img: dataFetch.img.stringValue,
+      });
+    });
+  }, [name]);
+
   return (
     <div
       className="modal fade"
       tabIndex="-1"
-      id="modal"
+      id={name.replace(/ /g, "")}
       aria-labelledby="modal"
       aria-hidden="true"
     >
-      <div className="modal-dialog">
+      <div className="modal-dialog modal-lg">
         <div className="modal-content">
           <div className="modal-header">
             <h5 className="modal-title">
-              {changeLanguage ? "Producto en ingles" : "Producto"}
+              {changeLanguage ? "Drug" : "Farmaco"}
             </h5>
             <button
               type="button"
@@ -24,36 +58,78 @@ export const ModalProduct = ({ img, changeLanguage }) => {
           </div>
           <div className="modal-body">
             <div className="row">
-              <div className="col-md">
-                <img src={img} alt="imagen" className="imgModal" />
+              <div className="col-md-6 mx-auto">
+                <Image imgString={data.img} />
               </div>
-              <div className="col-md">
-                <h1>{changeLanguage ? "Producto en ingles" : "Producto"}</h1>
-                <p>
-                  {changeLanguage
-                    ? "Descripcion del producto en ingles"
-                    : "Descripcion del producto"}
-                </p>
+              <div className="col-md-6 mx-auto">
+                <h1>{name}</h1>
+                {data.prinActive.length > 0 && (
+                  <div>
+                    <h4>
+                      {changeLanguage ? "Active principle" : "Principio Activo"}
+                    </h4>
+                    <ul>
+                      {changeLanguage
+                        ? data.prinActiveTran.map((prin, index) => (
+                            <li key={index}>{prin.stringValue}</li>
+                          ))
+                        : data.prinActive.map((prin, index) => (
+                            <li key={index}>{prin.stringValue}</li>
+                          ))}
+                    </ul>
+                  </div>
+                )}
+                {data.treatment.trim() && (
+                  <h4>
+                    {changeLanguage ? "Treatment" : "Tratamiento"}
+                    <p className="text-muted fs-6">
+                      {changeLanguage ? data.treatmentTran : data.treatment}
+                    </p>
+                  </h4>
+                )}
+                {data.dosage.trim() && (
+                  <h4>
+                    {changeLanguage ? "Dosage" : "Dosificacion"}
+                    <p className="text-muted fs-6">
+                      {changeLanguage ? data.dosageTran : data.dosage}
+                    </p>
+                  </h4>
+                )}
               </div>
             </div>
-            <div className="row text-center">
-              <h3>
-                {
-                  changeLanguage
-                  ? 'REACOMENDATIONS'
-                  : 'RECOMENDACIONES'
-                }
-              </h3>
-              <div className="row">
-                <div className="col-md">
-                  <GiHealthNormal />
-                  <span>Esto es la cosa del producto</span>
-                </div>
-                <div className="col-md">icon asdasdadadada</div>
+            <div className="row text-center my-2">
+              <h3>{changeLanguage ? "REACOMENDATIONS" : "RECOMENDACIONES"}</h3>
+              <div className="col-md-6">
+                <p className="text-left">
+                  <GiHealthNormal className="text-success" />{" "}
+                  {changeLanguage
+                    ? "Keep out of the reach of children"
+                    : "Mantener fuera del alcance de los niños"}
+                </p>
               </div>
-              <div className="row">
-                <div className="col-md">icon asdasdadadada</div>
-                <div className="col-md">icon asdasdadadada</div>
+              <div className="col-md-6">
+                <p className="text-left">
+                  <GiHealthNormal className="text-success" />{" "}
+                  {changeLanguage
+                    ? "Take care of your health, do not self-medicate"
+                    : "Cuide de su salud, no se automedique"}
+                </p>
+              </div>
+              <div className="col-md-6">
+                <p className="text-left">
+                  <GiHealthNormal className="text-success" />{" "}
+                  {changeLanguage
+                    ? "Consult your doctor"
+                    : "Consulte a su medico"}
+                </p>
+              </div>
+              <div className="col-md-6">
+                <p className="text-left">
+                  <GiHealthNormal className="text-success" />{" "}
+                  {changeLanguage
+                    ? "Keep the drug at a temperature no higher than 25% centigrade, in a cool place protected from light and moisture"
+                    : "Mantener el fármaco a una temperatura no mayor a los 25 % centígrados, en un lugar fresco protegido de la luz y humedad"}
+                </p>
               </div>
             </div>
           </div>

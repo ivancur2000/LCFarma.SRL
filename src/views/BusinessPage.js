@@ -28,7 +28,7 @@ export const BusinessPage = ({ changeLanguage }) => {
         <div className="row">
           {url.map((img, index) => (
             <div key={index} className="col-md-4">
-              <div data-bs-toggle="modal" data-bs-target="#modalCertificade">
+              <div data-bs-toggle="modal" data-bs-target={`#img${index}`}>
                 <img
                   src={img.urlDir}
                   alt="certificado"
@@ -38,7 +38,7 @@ export const BusinessPage = ({ changeLanguage }) => {
               <div
                 className="modal fade"
                 tabIndex="-1"
-                id="modalCertificade"
+                id={`img${index}`}
                 aria-labelledby="modal"
                 aria-hidden="true"
               >

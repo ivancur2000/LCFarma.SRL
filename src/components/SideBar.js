@@ -38,18 +38,14 @@ export const SideBar = () => {
               <FaPlaceOfWorship />
               Información de la empresa
             </Link>
-            <button className="nav-link slideBtn active mt-3">
+            <Link to="/products" className="nav-link slideBtn active mt-3">
               <FaProductHunt />
               Productos
-            </button>
+            </Link>
             <Link to="/certificade" className="nav-link slideBtn active mt-3">
               <MdBusinessCenter />
               Certificados
             </Link>
-            <button className="nav-link slideBtn active mt-3">
-              <BsFillQuestionCircleFill />
-              Preguntas Frecuentes
-            </button>
           </div>
         </div>
       </div>

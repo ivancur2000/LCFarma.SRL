@@ -11,6 +11,7 @@ import { HomeAdmin } from "../views/admin/HomePage";
 import { PerfilUser } from "../views/admin/PerfilUser";
 import { InfoLcfarma } from "../views/admin/InfoLcfarma";
 import { Certificade } from "../views/admin/Certificade";
+import { Products } from "../views/admin/Products";
 import { TermsAndConditions } from "../views/TermsAndConditions";
 
 export const Routes = ({ changeLanguage }) => {
@@ -31,7 +32,7 @@ export const Routes = ({ changeLanguage }) => {
         <BusinessPage changeLanguage={changeLanguage} />
       </Route>
       <Route path="/location" exact>
-        <LocationPage />
+        <LocationPage changeLanguage={changeLanguage} />
       </Route>
       <Route path="/termsCon" exact>
         <TermsAndConditions changeLanguage={changeLanguage} />
@@ -91,7 +92,18 @@ export const Routes = ({ changeLanguage }) => {
         }}
         exact
       />
-      <Route path="/*">
+      <Route
+        path="/products"
+        render={() => {
+          return token ? (
+            <Products />
+          ) : (
+            <HomePage changeLanguage={changeLanguage} />
+          );
+        }}
+        exact
+      />
+      <Route>
         <NotFoundPage />
       </Route>
     </Switch>

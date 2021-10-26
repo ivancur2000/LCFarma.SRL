@@ -58,11 +58,11 @@ export const Navbar = ({ changeLanguage, handleOnChange }) => {
                   : "Desarrollo de negocios"}
               </Link>
             </li>
-            {/* <li className="nav-item"> */}
-            {/*   <Link className="nav-link active" to="/location"> */}
-            {/*     {changeLanguage ? "Location" : "Ubicación"} */}
-            {/*   </Link> */}
-            {/* </li> */}
+            <li className="nav-item">
+              <Link className="nav-link active" to="/location">
+                {changeLanguage ? "Location" : "Ubicación"}
+              </Link>
+            </li>
           </ul>
           <div className="d-flex form-check form-switch">
             <input

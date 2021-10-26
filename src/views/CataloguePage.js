@@ -38,7 +38,7 @@ export const CataloguePage = ({ changeLanguage }) => {
               <button
                 className="btn btn-success"
                 data-bs-toggle="modal"
-                data-bs-target={`#${product.doc.data.value.mapValue.fields.name.stringValue}`}
+                data-bs-target={`#${product.doc.data.value.mapValue.fields.name.stringValue.replace(/ /g, "")}`}
               >
                 {changeLanguage ? "See more" : "Ver más"}
               </button>

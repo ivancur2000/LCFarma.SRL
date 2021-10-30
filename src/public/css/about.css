@@ -15,3 +15,10 @@ h3{
   width: 150px;
   height: 75px;
 }
+.multiLineTextLeft{
+  white-space: pre-line;
+  text-align: left;
+}
+.multiLineText{
+  white-space: pre-line;
+}

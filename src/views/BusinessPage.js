@@ -5,7 +5,7 @@ import { useGetImages } from "../hooks/useGetImages";
 
 export const BusinessPage = ({ changeLanguage }) => {
   const [info] = useSetDataInfo();
-  const url = useGetImages();
+  const [url, loading] = useGetImages();
 
   return (
     <>
@@ -20,12 +20,17 @@ export const BusinessPage = ({ changeLanguage }) => {
           <div className="spinner-grow m-auto"></div>
         </div>
       )}
-      <p className="textHistory m-5">
+      <p className="textHistory multiLineText m-5">
         {changeLanguage ? info.businessTranslate : info.business}
       </p>
       <div className="m-5">
         <h4>{changeLanguage ? "Certificates" : "Certificados"}</h4>
         <div className="row">
+          {loading && (
+            <div className="row">
+              <div className="spinner-grow m-auto"></div>
+            </div>
+          )}
           {url.map((img, index) => (
             <div key={index} className="col-md-4">
               <div data-bs-toggle="modal" data-bs-target={`#img${index}`}>
@@ -40,7 +45,6 @@ export const BusinessPage = ({ changeLanguage }) => {
                 tabIndex="-1"
                 id={`img${index}`}
                 aria-labelledby="modal"
-                aria-hidden="true"
               >
                 <div className="modal-dialog">
                   <img

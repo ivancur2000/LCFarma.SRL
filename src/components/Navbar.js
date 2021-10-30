@@ -3,21 +3,19 @@ import logo from "../public/img/LOGO2.png";
 import englishIcon from "../public/img/united-states.png";
 import spanishIcon from "../public/img/spain.png";
 import { Link } from "react-router-dom";
-import {useGetScroll} from "../hooks/useGetScroll";
+import { useGetScroll } from "../hooks/useGetScroll";
 
 import "../public/css/navbar.css";
 
-
 export const Navbar = ({ changeLanguage, handleOnChange }) => {
-
   const scroll = useGetScroll();
 
   return (
-    <nav className={`navbar fixed-top navbar-expand-lg navbar-dark text-center ${
-        scroll<=150?'opacityOn':
-        scroll>150&&'opacityOf'
-      }` 
-    }>
+    <nav
+      className={`navbar fixed-top navbar-expand-lg navbar-dark text-center ${
+        scroll <= 150 ? "opacityOn" : scroll > 150 && "opacityOf"
+      }`}
+    >
       <div className="container-fluid">
         <Link className="navbar-brand" to="/">
           <img src={logo} alt="Logo" className="logo" />
@@ -38,29 +36,29 @@ export const Navbar = ({ changeLanguage, handleOnChange }) => {
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
               <Link className="nav-link active" to="/">
-                {changeLanguage ? `Home` : `Inicio`}
+                {changeLanguage ? `HOME` : `INICIO`}
               </Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link active" to="/aboutus">
-                {changeLanguage ? "About Us" : `Sobre nosotros`}
+                {changeLanguage ? "ABOUT US" : `SOBRE NOSOTROS`}
               </Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link active" to="/catalogue">
-                {changeLanguage ? "Catalogue" : "Catálogo"}
+                {changeLanguage ? "CATALOGE" : "CATÁLOGO"}
               </Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link active" to="/business">
                 {changeLanguage
-                  ? "Business Development"
-                  : "Desarrollo de negocios"}
+                  ? "BUSINESS DEVELOPMENT"
+                  : "DESARROLLO DE NEGOCIOS"}
               </Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link active" to="/location">
-                {changeLanguage ? "Location" : "Ubicación"}
+                {changeLanguage ? "LOCATION" : "UBICACIÓN"}
               </Link>
             </li>
           </ul>

@@ -8,7 +8,11 @@ import { AdminNavbar } from "./components/AdminNavbar";
 import { AdminFooter } from "./components/AdminFooter";
 import { ScrollToTop } from "./helpers/ScrollToTop";
 
+import "./public/css/index.css";
+
 export const LandingPage = () => {
+
+
   const { changeLanguage, handleOnChange } = useChangeLanguage();
   const token = localStorage.getItem("token");
 

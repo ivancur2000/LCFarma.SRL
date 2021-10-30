@@ -12,11 +12,12 @@
   width: 75px;
 }
 .opacityOf{
-  background: rgb(43, 70, 52);
+  background: #097747;
   transition: background-color 0.8s linear;
 }
+
 .opacityOn{
-  background-color: rgb(43, 70, 52, 0.9) !important;
+  background-color: #097747dc !important;
   transition: background-color 0.8s linear;
 }
 .navbar-brand{
@@ -31,9 +32,6 @@
 .nav-link:hover{
   font-size: 19px;
   font-weight: bolder;
-}
-.navbar-brand:hover{
-  text-decoration: underline;
 }
 .sticky{
   height: 80px

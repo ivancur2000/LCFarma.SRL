@@ -6,18 +6,17 @@ export const InfoLcfarma = () => {
   const [info, handleOnChange, handleOnRestart] = useSetDataInfo();
 
   const [error, handleOnUpdate] = useUpdateInfo(info);
-  console.log(info);
 
   return (
     <div>
       <div className="row m-0">
-        <h1 className="text-center mt-2">Informacion general de la empresa</h1>
+        <h1 className="text-center mt-2">Información general de la empresa</h1>
         {info.loading && <div className="mx-auto spinner-border"></div>}
       </div>
       <hr />
       <div className="container row mx-auto justify-content-center m-0">
         <div className="col-md-4">
-          <h4>Mision</h4>
+          <h4>Misión</h4>
           <div className="mb-3">
             <textarea
               className="form-control"
@@ -31,7 +30,7 @@ export const InfoLcfarma = () => {
           </div>
         </div>
         <div className="col-md-4">
-          <h4>Vision</h4>
+          <h4>Visión</h4>
           <div className="mb-3">
             <textarea
               className="form-control"
@@ -47,7 +46,7 @@ export const InfoLcfarma = () => {
       </div>
       <div className="container row mx-auto justify-content-center m-0">
         <div className="col-md-4">
-          <h4>Mision traducion al ingles</h4>
+          <h4>Misión traducción al ingles</h4>
           <div className="mb-3">
             <textarea
               className="form-control"
@@ -61,7 +60,7 @@ export const InfoLcfarma = () => {
           </div>
         </div>
         <div className="col-md-4">
-          <h4>Vision traducion al ingles</h4>
+          <h4>Visión traducción al ingles</h4>
           <div className="mb-3">
             <textarea
               className="form-control"
@@ -91,7 +90,7 @@ export const InfoLcfarma = () => {
         </div>
       </div>
       <div className="container">
-        <h4>Valores traducion al ingles</h4>
+        <h4>Valores traducción al ingles</h4>
         <div className="mb-3">
           <textarea
             className="form-control"
@@ -121,7 +120,7 @@ export const InfoLcfarma = () => {
       </div>
 
       <div className="container">
-        <h4>Historia traducion al ingles</h4>
+        <h4>Historia traducción al ingles</h4>
         <div className="mb-3">
           <textarea
             className="form-control"
@@ -135,7 +134,7 @@ export const InfoLcfarma = () => {
         </div>
       </div>
       <div className="container">
-        <h4>Desarollo de negocios</h4>
+        <h4>Desarrollo de negocios</h4>
         <div className="mb-3">
           <textarea
             className="form-control"
@@ -150,7 +149,7 @@ export const InfoLcfarma = () => {
       </div>
 
       <div className="container">
-        <h4>Desarollo de negocios traducion al ingles</h4>
+        <h4>Desarrollo de negocios traducción al ingles</h4>
         <div className="mb-3">
           <textarea
             className="form-control"

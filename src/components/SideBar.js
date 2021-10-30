@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { BiHomeAlt } from "react-icons/bi";
 import { FaPlaceOfWorship, FaProductHunt } from "react-icons/fa";
 import { MdBusinessCenter } from "react-icons/md";
-import { BsFillQuestionCircleFill } from "react-icons/bs"
 import logo from "../public/img/LOGO2.png";
 
 export const SideBar = () => {

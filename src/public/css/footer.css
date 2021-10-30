@@ -2,5 +2,14 @@
   width: 50px;
 }
 .footer{
-  background: rgba(0, 0, 0, 0.05);
+  background:#137251;
+  color:#fff;
+}
+.footer-header{
+  background:#097747;
+  color:rgb(255, 255, 255);
+}
+.footer-admin{
+  background:#137251;
+  color:#fff;
 }

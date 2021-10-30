@@ -1,5 +1,5 @@
 import React from "react";
-import {RegisterUser} from "../../components/RegisterUser";
+import { RegisterUser } from "../../components/RegisterUser";
 import { useUpdatePerfil } from "../../hooks/useUpdatePerfil";
 
 export const PerfilUser = () => {
@@ -26,7 +26,7 @@ export const PerfilUser = () => {
 
         <div className="mb-3">
           <label htmlFor="exampleInputEmail1" className="form-label">
-            Direccion de correo Electrónico:
+            Dirección de correo Electrónico:
           </label>
           <input
             disabled

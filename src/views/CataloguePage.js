@@ -20,7 +20,7 @@ export const CataloguePage = ({ changeLanguage }) => {
     <>
       <div className="sticky title"></div>
       <div className="title">
-        <h2>{changeLanguage ? "Catalogue" : "Catalógo"}</h2>
+        <h2>{changeLanguage ? "Our Catalogue" : "Nuestro Catalógo"}</h2>
       </div>
       <div className="my-5 mx-auto">
         <div className="row w-100 mx-auto">
@@ -30,15 +30,15 @@ export const CataloguePage = ({ changeLanguage }) => {
             </div>
           }
           {docs.map((product, index)=>(
-            <div className="col-md-4 mx-auto" key={index}>
+            <div className="col-md-3 mx-auto" key={index}>
               <Image imgString={product.doc.data.value.mapValue.fields.img.stringValue} />
               <h4 className="fs-5 fw-bold">
                 {product.doc.data.value.mapValue.fields.name.stringValue}
               </h4>
               <button
-                className="btn btn-success"
+                className="btn btnPurple"
                 data-bs-toggle="modal"
-                data-bs-target={`#${product.doc.data.value.mapValue.fields.name.stringValue.replace(/ /g, "")}`}
+                data-bs-target={`#${product.doc.data.value.mapValue.fields.name.stringValue.replace(/ /g, "").replace(/ *\([^)]*\) */g, "")}`}
               >
                 {changeLanguage ? "See more" : "Ver más"}
               </button>

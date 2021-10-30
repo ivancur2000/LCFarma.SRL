@@ -17,7 +17,7 @@ import "../public/css/footer.css";
 
 export const Footer = ({ changeLanguage }) => {
   return (
-    <footer className="text-center text-lg-start bg-dark text-muted">
+    <footer className="text-center text-lg-start footer-header">
       <section className="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
         <span className="me-5 d-none d-lg-block">
           {changeLanguage
@@ -58,7 +58,7 @@ export const Footer = ({ changeLanguage }) => {
               <p>
                 {changeLanguage
                   ? "LCFarma.SRL is a pharmaceutical distributor, with more than 8 years of experience in the market, having offices in 3 departments: La Paz, Cochabamba, Santa Cruz"
-                  : "LCFarma.SRL es una distribuidora farmacéutica, con más de 8 años de experiencia en el mercado teniendo oficinas en 3 deperartamentos: La Paz, Cochabamba, Santa Cruz"}
+                  : "LCFarma.SRL es una distribuidora farmacéutica, con más de 8 años de experiencia en el mercado teniendo oficinas en 3 departamentos: La Paz, Cochabamba, Santa Cruz"}
               </p>
             </div>
 
@@ -90,19 +90,19 @@ export const Footer = ({ changeLanguage }) => {
                 {changeLanguage ? "Contact" : "Contacto"}
               </h6>
               <p>
-                <AiFillHome className="me-3" />
+                <AiFillHome className="me-1" />
                 La Paz-Cochabamba-Santa Cruz
               </p>
               <p>
-                <RiCellphoneFill className="me-3" />
+                <RiCellphoneFill className="me-1" />
                 Cel: 707 79387
               </p>
               <p>
-                <AiFillPhone className="me-3" />
+                <AiFillPhone className="me-1" />
                 {changeLanguage ? "Phone" : "Fono"}: (+591) 2713644 - 2713268
               </p>
               <p>
-                <MdEmail />
+                <MdEmail className="me-1" />
                 Email:
                 gerenciageneral@lcpharmabolivia.com
               </p>

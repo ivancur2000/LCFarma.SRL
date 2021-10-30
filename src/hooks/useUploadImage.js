@@ -8,6 +8,7 @@ export const useUploadImage = () => {
   const [state, setState] = useState({
     success: "",
     error: "",
+    loading: false,
   });
 
   const handleOnChange = ({ target }) => {

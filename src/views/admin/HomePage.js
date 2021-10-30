@@ -13,10 +13,10 @@ export const HomeAdmin = () => {
         <div className="container col-md-6 align-self-center presentAdmin">
           <h1>Bienvenido {user ? user : email}</h1>
           <p>
-            Como administrador de este sitio web tu podrás modificar a tu gusto
-            el contenido de la mismo. Podrás modificar tu catálogo de productos,
-            la información de tu empresa, podrás poner las preguntas frecuentes
-            de la misma y muchas otras cosas más, adelante echa un vistazo
+            Como administrador de este sitio web podrás modificar a tu gusto el
+            contenido de la misma. Podrás modificar tu catálogo de productos, la
+            información de tu empresa, podrás poner las preguntas frecuentes de
+            la misma y muchas otras cosas más, adelante echa un vistazo
           </p>
           <a
             className="btn btn-outline-success"
@@ -30,7 +30,7 @@ export const HomeAdmin = () => {
         </div>
       </div>
       <div className="row w-75 mb-5 mx-auto">
-        <div className="col-md-4">
+        <div className="col-md-4 mx-auto">
           <h2 className="text-center">
             Modifica la información básica de tu empresa
           </h2>
@@ -40,7 +40,7 @@ export const HomeAdmin = () => {
             traducción al ingles para mostrar a tus clientes
           </p>
         </div>
-        <div className="col-md-4">
+        <div className="col-md-4 mx-auto">
           <h2 className="text-center">
             Modifica tu catálogo de productos cuando quieras
           </h2>
@@ -48,16 +48,6 @@ export const HomeAdmin = () => {
           <p>
             En cualquier momento podrás modificar la lista de productos y su
             información básica
-          </p>
-        </div>
-        <div className="col-md-4">
-          <h2 className="text-center">
-            Agrega las preguntas más frecuentes que tus clientes realizan
-          </h2>
-          <hr />
-          <p>
-            Podrás agregar las preguntas frecuentes que tus clientes realizan
-            con facilidad
           </p>
         </div>
       </div>

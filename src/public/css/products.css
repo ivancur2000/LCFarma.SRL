@@ -1,11 +1,16 @@
-.imageProduct{
-  width: 300px;
-  height: 250px;
+.imageProduct {
+  width: 271px;
+  height: 162px;
 }
-.iconProduct{
+
+.iconProduct {
+  font-size: 55px;
+  background: #8e4797;
+  padding: 15px;
+  border-radius: 50%;
   color: #ffff;
-  background: #0000;
 }
-.text-left{
+
+.text-left {
   text-align: left;
 }

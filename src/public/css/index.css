@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique:wght@300&display=swap');
+*{
+  font-family: 'Zen Kaku Gothic Antique', sans-serif;
+}
+.btnPurple{
+  background: #9b3675 !important;
+  border-radius: 50px !important;
+  color: #ffff !important;
+}
+.btnPurple:hover{
+  background: #327e51 !important;
+}

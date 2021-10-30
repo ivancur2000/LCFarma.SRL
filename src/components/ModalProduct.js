@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { doc, getDoc } from "@firebase/firestore";
 import { GiHealthNormal } from "react-icons/gi";
+import { AiOutlineHome, AiFillHeart } from "react-icons/ai";
+import { FaTemperatureLow } from "react-icons/fa";
 import { db } from "../firebaseConfig";
 import { Image } from "../components/Image";
 
@@ -39,11 +41,11 @@ export const ModalProduct = ({ name, changeLanguage }) => {
     <div
       className="modal fade"
       tabIndex="-1"
-      id={name.replace(/ /g, "")}
+      id={name.replace(/ /g, "").replace(/ *\([^)]*\) */g, "")}
       aria-labelledby="modal"
       aria-hidden="true"
     >
-      <div className="modal-dialog modal-lg">
+      <div className="modal-dialog modal-xl">
         <div className="modal-content">
           <div className="modal-header">
             <h5 className="modal-title">
@@ -58,8 +60,8 @@ export const ModalProduct = ({ name, changeLanguage }) => {
           </div>
           <div className="modal-body">
             <div className="row">
-              <div className="col-md-6 mx-auto">
-                <Image imgString={data.img} />
+              <div className="col-md-6 m-auto">
+                <Image imgString={data.img} className="imageProduct" />
               </div>
               <div className="col-md-6 mx-auto">
                 <h1>{name}</h1>
@@ -68,15 +70,19 @@ export const ModalProduct = ({ name, changeLanguage }) => {
                     <h4>
                       {changeLanguage ? "Active principle" : "Principio Activo"}
                     </h4>
-                    <ul>
+                    <div>
                       {changeLanguage
                         ? data.prinActiveTran.map((prin, index) => (
-                            <li key={index}>{prin.stringValue}</li>
+                            <p className="text-muted" key={index}>
+                              {prin.stringValue}
+                            </p>
                           ))
                         : data.prinActive.map((prin, index) => (
-                            <li key={index}>{prin.stringValue}</li>
+                            <p className="text-muted" key={index}>
+                              {prin.stringValue}
+                            </p>
                           ))}
-                    </ul>
+                    </div>
                   </div>
                 )}
                 {data.treatment.trim() && (
@@ -89,7 +95,7 @@ export const ModalProduct = ({ name, changeLanguage }) => {
                 )}
                 {data.dosage.trim() && (
                   <h4>
-                    {changeLanguage ? "Dosage" : "Dosificacion"}
+                    {changeLanguage ? "Dosage" : "Dosificación"}
                     <p className="text-muted fs-6">
                       {changeLanguage ? data.dosageTran : data.dosage}
                     </p>
@@ -101,7 +107,7 @@ export const ModalProduct = ({ name, changeLanguage }) => {
               <h3>{changeLanguage ? "REACOMENDATIONS" : "RECOMENDACIONES"}</h3>
               <div className="col-md-6">
                 <p className="text-left">
-                  <GiHealthNormal className="text-success" />{" "}
+                  <AiOutlineHome className="iconProduct" />{" "}
                   {changeLanguage
                     ? "Keep out of the reach of children"
                     : "Mantener fuera del alcance de los niños"}
@@ -109,7 +115,7 @@ export const ModalProduct = ({ name, changeLanguage }) => {
               </div>
               <div className="col-md-6">
                 <p className="text-left">
-                  <GiHealthNormal className="text-success" />{" "}
+                  <AiFillHeart className="iconProduct" />{" "}
                   {changeLanguage
                     ? "Take care of your health, do not self-medicate"
                     : "Cuide de su salud, no se automedique"}
@@ -117,19 +123,23 @@ export const ModalProduct = ({ name, changeLanguage }) => {
               </div>
               <div className="col-md-6">
                 <p className="text-left">
-                  <GiHealthNormal className="text-success" />{" "}
+                  <GiHealthNormal className="iconProduct" />{" "}
                   {changeLanguage
                     ? "Consult your doctor"
-                    : "Consulte a su medico"}
+                    : "Consulte a su médico"}
                 </p>
               </div>
               <div className="col-md-6">
-                <p className="text-left">
-                  <GiHealthNormal className="text-success" />{" "}
-                  {changeLanguage
-                    ? "Keep the drug at a temperature no higher than 25% centigrade, in a cool place protected from light and moisture"
-                    : "Mantener el fármaco a una temperatura no mayor a los 25 % centígrados, en un lugar fresco protegido de la luz y humedad"}
-                </p>
+                <div className="row">
+                  <div className="col-2">
+                    <FaTemperatureLow className="iconProduct" />
+                  </div>{" "}
+                  <p className="text-left col-10">
+                    {changeLanguage
+                      ? "Keep the drug at a temperature no higher than 25% centigrade, in a cool place protected from light and moisture"
+                      : "Mantener el fármaco a una temperatura no mayor a los 25 % centígrados, en un lugar fresco protegido de la luz y humedad"}
+                  </p>
+                </div>
               </div>
             </div>
           </div>

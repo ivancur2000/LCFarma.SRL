@@ -96,7 +96,7 @@ export const ModalAddProduct = () => {
               </div>
               <div className="mb-3">
                 <label className="form-label" htmlFor="textActiveTran">
-                  Principio activo Traduccion
+                  Principio activo Traducción
                 </label>
                 {form.prinActiveTran.map((act, index) => (
                   <p className="text-muted" key={index}>
@@ -139,7 +139,7 @@ export const ModalAddProduct = () => {
               </div>
               <div className="mb-3">
                 <label htmlFor="treatmentTran" className="form-label">
-                  Tratamiento Traduccion
+                  Tratamiento Traducción
                 </label>
                 <input
                   type="text"
@@ -151,7 +151,7 @@ export const ModalAddProduct = () => {
               </div>
               <div className="mb-3">
                 <label htmlFor="treatment" className="form-label">
-                  Dosificacion
+                  Dosificación
                 </label>
                 <input
                   type="text"
@@ -163,7 +163,7 @@ export const ModalAddProduct = () => {
               </div>
               <div className="mb-3">
                 <label htmlFor="treatmentTran" className="form-label">
-                  Dosificacion Traduccion
+                  Dosificación Traducción
                 </label>
                 <input
                   type="text"

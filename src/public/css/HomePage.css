@@ -24,10 +24,13 @@
     100%{background-position:0% 81%}
 }
 .iconHome{
-    font-size: 100px;
+    font-size: 50px;
     margin-top: 25px;
     background:#479779;
-    padding: 15px;
+    padding: 10px;
     border-radius: 50%;
     color: #ffff;
+}
+.titleHome{
+    color: #000;
 }

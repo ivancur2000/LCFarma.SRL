@@ -50,7 +50,9 @@ export const AboutPage = ({ changeLanguage }) => {
                   <div className="spinner-grow m-auto"></div>
                 </div>
               ) : null}
-              <p>{changeLanguage ? info.valuesTranslate : info.values}</p>
+              <p className="multiLineTextLeft">
+                {changeLanguage ? info.valuesTranslate : info.values}
+              </p>
             </div>
           </div>
         </div>
@@ -63,7 +65,7 @@ export const AboutPage = ({ changeLanguage }) => {
               <div className="spinner-grow m-auto"></div>
             </div>
           ) : null}
-          <p className="textHistory">
+          <p className="textHistory multiLineText">
             {changeLanguage ? info.historyTranslate : info.history}
           </p>
         </div>

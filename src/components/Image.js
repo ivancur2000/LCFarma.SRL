@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { storage } from "../firebaseConfig";
 import { ref, getDownloadURL } from "@firebase/storage";
 
-export const Image = ({ imgString }) => {
+export const Image = ({ imgString, className }) => {
   const [url, setUrl] = useState("");
 
   useEffect(() => {
@@ -13,8 +13,8 @@ export const Image = ({ imgString }) => {
   }, [imgString]);
 
   return (
-    <div>
-      <img src={url} alt="farmaco" className="imageProduct m-2" />
+    <div className="my-auto">
+      <img src={url} alt="farmaco" className={`${className}`} />
     </div>
   );
 };

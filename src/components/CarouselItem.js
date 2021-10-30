@@ -3,18 +3,15 @@ import PropTypes from "prop-types";
 
 export const CarouselItem = ({ img, active, changeLanguage }) => {
   return (
-    <div
-      className={`carousel-item ${active && "active"}`}
-      data-bs-interval="2000"
-    >
+    <div className={`carousel-item ${active && "active"}`}>
       <img
         src={img}
         alt="Imagen de LCFarma"
-        className="d-block vw-100 vh-100"
+        className="d-block vw-100 imgCarousel"
       />
       <div className="carousel-caption m-2">
         <div className="row">
-          <div className="col-md-4 item-caption1">
+          <div className="col-md-3 item-caption1">
             <h5>{changeLanguage ? "US" : "Nosotros"}</h5>
             <p>
               {changeLanguage

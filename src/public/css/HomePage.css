@@ -32,5 +32,16 @@
     color: #ffff;
 }
 .titleHome{
-    color: #000;
+    color: #0db26b;
+    font-weight: bold;
+    text-decoration: none;
+}
+.home-title{
+  color: #a74e85;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.home-title:hover{
+  color: #a74e85;
 }

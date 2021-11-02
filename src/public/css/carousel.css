@@ -38,25 +38,21 @@
   height: 100vh !important;
 }
 
-.container-filing {
-  height: 0;
-}
-
-@media screen and (max-width: 800px) {
-
+@media screen and (max-width: 850px) {
   .imgCarousel {
-    height: 40vh !important;
+    height: 35vh !important;
   }
 
   .carousel-item {
-    height: 830px !important;
+    height: 680px !important;
   }
 
   .item-caption1,
   .item-caption2,
   .item-caption3 {
-    margin: 3px 0;
     border-radius: 20px !important;
+    margin: 3px 0;
+    min-width: 100vw;
   }
 
   .item-caption1 {
@@ -69,11 +65,6 @@
 
   .item-caption3 {
     background: rgb(24, 90, 68, 0.9);
-  }
-
-  .container-filing {
-    background: #097747;
-    height: 80px;
   }
 
   .carousel-control-next,

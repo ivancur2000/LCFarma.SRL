@@ -1,51 +1,118 @@
-.icon{
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
+
+.icon {
   margin-left: 5px;
   width: 25px;
 }
-.form-check-label{
+
+.form-check-label {
   color: #ffff;
 }
-.logo{
+
+.logo {
   background: #ffff;
-  border-radius: 20px;
+  border-radius: 5px;
   padding: 5px;
-  width: 75px;
-}
-.opacityOf{
-  background: #097747;
-  transition: background-color 0.8s linear;
+  min-width: 142px;
+  min-height: 98px;
 }
 
-.opacityOn{
-  background-color: #097747dc !important;
-  transition: background-color 0.8s linear;
+.logoText {
+  justify-content: flex-end;
 }
-.navbar-brand{
+
+.navbar-header {
+  background: #097747;
+}
+
+.navbar-max-screen {
+  background: #ffffff;
+  margin: 30px 0;
+}
+
+.navbar-min-screen {
+  background: #097747;
+  margin: 0;
+}
+
+.navbar .navbar-content {
+  background: #097747;
+}
+
+.navbar-content {
+  border-radius: 20px;
+}
+
+.nav-link {
+  color: #ffff;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0 10px;
+}
+
+.brand-header {
+  color: #ffff;
+  text-align: left;
+  text-decoration: none;
+}
+
+.brand-header:hover {
+  color: #ffff;
+}
+
+.navbar-title,
+.navbar-subtitle {
+  font-family: "Fredoka One", cursive;
+  font-style: italic;
+  letter-spacing: 2px;
+}
+
+.navbar-title {
+  font-size: 25px;
+}
+
+.navbar-subtitle {
+  font-size: 15px;
+}
+
+.navbar-info {
   font-weight: bold;
 }
-.nav-link{
-  font-size: 18px;
-  margin: 0 5px;
-  -webkit-transition: font-size .5s ease !important;
-  transition: font-size .5s ease !important;
-}
-.nav-link:hover{
-  font-size: 19px;
-  font-weight: bolder;
-}
-.sticky{
-  height: 80px
-}
-.title{
-  background-color: rgb(55, 126, 87);
+
+.title {
+  background: #097747;
   color: rgb(241, 241, 241);
-  padding: 10px;
-  text-align: center;
+  padding: 30px;
+  height: 100px;
+  text-align: left;
 }
-h4{
+
+.title h2{
+  font-weight: bold;
+  margin-left: 25px;
+  text-transform: uppercase;
+}
+
+h4 {
   color: rgb(92, 148, 111);
 }
-.imgModal{
+
+.imgModal {
   width: 250px;
   height: 250px;
+}
+
+.btn-navbar {
+  text-align: right;
+}
+
+.icon-btn-navbar {
+  border: 2px solid transparent;
+  border-radius: 10px;
+  padding: 1px;
+}
+
+.icon-btn-navbar:hover {
+  color: rgb(201, 201, 201);
+  background: #0b5a379a;
 }

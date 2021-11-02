@@ -33,18 +33,18 @@ export const Footer = ({ changeLanguage }) => {
           >
             <FaFacebook />
           </a>
-          <a className="me-4 text-reset" href="/#">
-            <FaTwitter />
-          </a>
-          <a className="me-4 text-reset" href="/#">
-            <FaInstagram />
-          </a>
-          <a className="me-4 text-reset" href="/#">
-            <FaGoogle />
-          </a>
-          <a className="me-4 text-reset" href="/#">
-            <FaLinkedin />
-          </a>
+          {/* <a className="me-4 text-reset" href="/#"> */}
+          {/*   <FaTwitter /> */}
+          {/* </a> */}
+          {/* <a className="me-4 text-reset" href="/#"> */}
+          {/*   <FaInstagram /> */}
+          {/* </a> */}
+          {/* <a className="me-4 text-reset" href="/#"> */}
+          {/*   <FaGoogle /> */}
+          {/* </a> */}
+          {/* <a className="me-4 text-reset" href="/#"> */}
+          {/*   <FaLinkedin /> */}
+          {/* </a> */}
         </div>
       </section>
       <section>
@@ -104,7 +104,7 @@ export const Footer = ({ changeLanguage }) => {
               <p>
                 <MdEmail className="me-1" />
                 Email:
-                gerenciageneral@lcpharmabolivia.com
+                administracion@lcpharmabolivia.com
               </p>
             </div>
           </div>

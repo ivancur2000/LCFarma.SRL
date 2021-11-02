@@ -60,8 +60,10 @@ export const ModalProduct = ({ name, changeLanguage }) => {
           </div>
           <div className="modal-body">
             <div className="row">
-              <div className="col-md-6 m-auto">
-                <Image imgString={data.img} className="imageProduct" />
+              <div className="col-md-6 m-auto row">
+                <div className="col-7 justify-content-center">
+                  <Image imgString={data.img} className="imageProduct" />
+                </div>
               </div>
               <div className="col-md-6 mx-auto">
                 <h1>{name}</h1>

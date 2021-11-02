@@ -1,12 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique:wght@300&display=swap');
-*{
-  font-family: 'Zen Kaku Gothic Antique', sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique:wght@300&display=swap");
+* {
+  font-family: "Zen Kaku Gothic Antique", sans-serif;
 }
-.btnPurple{
+.parraf{
+  color: #656565;
+}
+.btnPurple {
   background: #9b3675 !important;
   border-radius: 50px !important;
   color: #ffff !important;
 }
-.btnPurple:hover{
+.btnPurple:hover {
   background: #327e51 !important;
+}
+.btn-goUp{
+  background: #1b5b3f !important;
+  border-radius: 20px !important;
+  color: #ffff !important;
+  margin-right: 15px;
+  width: 150px !important;
+}
+.btn-goUp:hover{
+  background: rgb(44, 102, 77) !important;
 }

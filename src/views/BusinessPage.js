@@ -9,9 +9,8 @@ export const BusinessPage = ({ changeLanguage }) => {
 
   return (
     <>
-      <div className="sticky title"></div>
-      <div className="title">
-        <h2>
+      <div className="title mt-3">
+        <h2 className="animate__animated animate__fadeInLeft">
           {changeLanguage ? "Business development" : "Desarollo de Negocios"}
         </h2>
       </div>

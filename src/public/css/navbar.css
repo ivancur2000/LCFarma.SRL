@@ -50,7 +50,7 @@
   margin: 0 10px;
 }
 
-.nav-link:hover{
+.nav-link:hover {
   color: #BABABA !important;
 }
 
@@ -91,7 +91,7 @@
   text-align: left;
 }
 
-.title h2{
+.title h2 {
   font-weight: bold;
   margin-left: 25px;
   text-transform: uppercase;

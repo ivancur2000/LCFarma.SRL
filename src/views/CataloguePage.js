@@ -30,11 +30,16 @@ export const CataloguePage = ({ changeLanguage }) => {
             </div>
           )}
           {docs.map((product, index) => (
-            <div className="col-md-3 mx-auto" key={index}>
+            <div className="col-md-3 mx-auto my-2" key={index}>
               <Image
                 imgString={
-                  product.doc.data.value.mapValue.fields.img.stringValue
+                  product.doc.data.value.mapValue.fields.img.arrayValue
+                    .values[0].stringValue
                 }
+                name={product.doc.data.value.mapValue.fields.name.stringValue
+                  .replace(/ /g, "")
+                  .replace(/ *\([^)]*\) */g, "")}
+                className="imageProductModal mx-1"
               />
               <h4 className="fs-5 fw-bold">
                 {product.doc.data.value.mapValue.fields.name.stringValue}
@@ -50,6 +55,7 @@ export const CataloguePage = ({ changeLanguage }) => {
               </button>
               <ModalProduct
                 name={product.doc.data.value.mapValue.fields.name.stringValue}
+                dataDoc={product.doc.data.value.mapValue.fields}
                 changeLanguage={changeLanguage}
               />
             </div>

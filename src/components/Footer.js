@@ -5,13 +5,7 @@ import logo from "../public/img/LOGO2.png";
 import { AiFillHome, AiFillPhone } from "react-icons/ai";
 import { RiCellphoneFill } from "react-icons/ri";
 import { MdEmail } from "react-icons/md";
-import {
-  FaFacebook,
-  FaTwitter,
-  FaLinkedin,
-  FaInstagram,
-  FaGoogle,
-} from "react-icons/fa";
+import { FaFacebook } from "react-icons/fa";
 
 import "../public/css/footer.css";
 

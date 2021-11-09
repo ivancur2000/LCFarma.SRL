@@ -14,9 +14,10 @@ export const useAddProducts = () => {
     treatmentTran: "",
     dosage: "",
     dosageTran: "",
-    img: {},
+    img: [],
     error: "",
     success: "",
+    loading: false,
   });
 
   const handleOnChange = ({ target }) => {
@@ -24,7 +25,7 @@ export const useAddProducts = () => {
   };
 
   const handleOnFile = ({ target }) => {
-    setForm({ ...form, [target.name]: target.files[0] });
+    setForm({ ...form, [target.name]: target.files });
   };
 
   const handleOnAdd = () => {
@@ -60,9 +61,21 @@ export const useAddProducts = () => {
   const handleOnSubmit = (event) => {
     event.preventDefault();
 
-    if (form.name.trim() && form.img.name) {
-      let name = form.name;
-      let datos = {
+    if (form.name.trim() && form.img.length > 0) {
+      const name = form.name;
+
+      setForm({
+        ...form,
+        loading: true,
+      });
+
+      let img = [];
+
+      for (let i = 0; i < form.img.length; i++) {
+        img = [...img, form.img[i].name];
+      }
+
+      const data = {
         name: form.name,
         prinActive: form.prinActive,
         prinActiveTran: form.prinActiveTran,
@@ -70,17 +83,33 @@ export const useAddProducts = () => {
         treatmentTran: form.treatmentTran,
         dosage: form.dosage,
         dosageTran: form.dosageTran,
-        img: form.img.name,
+        img,
       };
-      setDoc(doc(db, "product", name), datos).then(() => {
-        const reference = ref(storage, "product/" + form.img.name);
-        uploadBytes(reference, form.img).then(() => {
-          setForm({
-            ...form,
-            success: "Proceso exitoso",
-          });
-          window.location.reload();
-        });
+
+      setDoc(doc(db, "product", name), data).then(() => {
+        const nameDoc = form.name
+          .replace(/ /g, "")
+          .replace(/ *\([^)]*\) */g, "");
+
+        for (let i = 0; i < form.img.length; i++) {
+          const reference = ref(
+            storage,
+            `product/${nameDoc}/${form.img[i].name}`
+          );
+          uploadBytes(reference, form.img[i])
+            .then(() => {
+              if (i === form.img.length - 1) {
+                window.location.reload();
+
+                setForm({
+                  ...form,
+                  success: "Proceso exitoso",
+                  loading: false,
+                });
+              }
+            })
+            .catch((err) => console.log(err));
+        }
       });
     } else {
       setForm({

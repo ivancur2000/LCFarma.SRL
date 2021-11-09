@@ -17,12 +17,21 @@ export const Products = () => {
     );
   }, []);
 
-  const handleDeleteFile = (path, img) => {
-    const imgRef = ref(storage, "product/" + img);
-    deleteObject(imgRef).then(() => {
-      deleteDoc(doc(db, "product", path)).then(() => window.location.reload());
-    });
+  const handleDeleteFile = (name, img) => {
+    const namePro = name.replace(/ /g, "").replace(/ *\([^)]*\) */g, "");
+    
+    for (let i = 0; i < img.length; i++) {
+      const imgRef = ref(storage, `product/${namePro}/${img[i].stringValue}`);
+      deleteObject(imgRef).then(() => {
+        if (i === img.length - 1) {
+          deleteDoc(doc(db, "product", name)).then(() =>
+            window.location.reload()
+          );
+        }
+      });
+    }
   };
+
   return (
     <div className="min-vh-100">
       <h1 className="text-center">Productos</h1>
@@ -40,7 +49,14 @@ export const Products = () => {
         {docs.map((product, index) => (
           <div className="col-md-4 mx-auto" key={index}>
             <Image
-              imgString={product.doc.data.value.mapValue.fields.img.stringValue}
+              imgString={
+                product.doc.data.value.mapValue.fields.img.arrayValue.values[0]
+                  .stringValue
+              }
+              className="imageProductModal my-2"
+              name={product.doc.data.value.mapValue.fields.name.stringValue
+                .replace(/ /g, "")
+                .replace(/ *\([^)]*\) */g, "")}
             />
             <h4 className="fs-5 fw-bold">
               {product.doc.data.value.mapValue.fields.name.stringValue}
@@ -48,7 +64,9 @@ export const Products = () => {
             <button
               className="btn btn-success"
               data-bs-toggle="modal"
-              data-bs-target={`#${product.doc.data.value.mapValue.fields.name.stringValue.replace(/ /g, "")}`}
+              data-bs-target={`#${product.doc.data.value.mapValue.fields.name.stringValue
+                .replace(/ /g, "")
+                .replace(/ *\([^)]*\) */g, "")}`}
             >
               Ver detalles
             </button>
@@ -58,7 +76,7 @@ export const Products = () => {
               onClick={() =>
                 handleDeleteFile(
                   product.doc.data.value.mapValue.fields.name.stringValue,
-                  product.doc.data.value.mapValue.fields.img.stringValue
+                  product.doc.data.value.mapValue.fields.img.arrayValue.values
                 )
               }
             >
@@ -67,6 +85,7 @@ export const Products = () => {
 
             <ModalProduct
               name={product.doc.data.value.mapValue.fields.name.stringValue}
+              dataDoc={product.doc.data.value.mapValue.fields}
               changeLanguage={false}
             />
           </div>

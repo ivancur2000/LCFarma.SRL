@@ -25,7 +25,7 @@ export const Carousel = ({changeLanguage}) => {
           <CarouselItem img={img3} changeLanguage={changeLanguage} />
         </div>
         <button
-          className="carousel-control-prev"
+          className="carousel-control-prev prevItem"
           type="button"
           data-bs-target="#carouselLCFarma"
           data-bs-slide="prev"
@@ -34,7 +34,7 @@ export const Carousel = ({changeLanguage}) => {
           <span className="visually-hidden">Previous</span>
         </button>
         <button
-          className="carousel-control-next"
+          className="carousel-control-next nextItem"
           type="button"
           data-bs-target="#carouselLCFarma"
           data-bs-slide="next"

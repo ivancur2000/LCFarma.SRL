@@ -2,7 +2,6 @@ import React from "react";
 import { useAddProducts } from "../helpers/addProducts";
 
 export const ModalAddProduct = () => {
-
   const {
     form,
     handleOnAdd,
@@ -11,7 +10,7 @@ export const ModalAddProduct = () => {
     handleOnFile,
     handleOnRemove,
     handleOnRemoveTran,
-    handleOnSubmit
+    handleOnSubmit,
   } = useAddProducts();
 
   return (
@@ -56,6 +55,7 @@ export const ModalAddProduct = () => {
                 <label htmlFor="img">Imagen</label>
                 <input
                   type="file"
+                  multiple
                   className="form-control"
                   name="img"
                   id="img"
@@ -174,13 +174,14 @@ export const ModalAddProduct = () => {
                 />
               </div>
               <div className="my-3">
-                <p className="text-danger">
-                  { form.error }
-                </p>
-                <p className="text-success">
-                  { form.success }
-                </p>
+                <p className="text-danger">{form.error}</p>
+                <p className="text-success">{form.success}</p>
               </div>
+              {form.loading && (
+                <div className="row">
+                  <div className="spinner-grow m-auto"></div>
+                </div>
+              )}
               <button type="submit" className="btn btn-primary">
                 Registrar
               </button>

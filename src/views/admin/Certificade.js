@@ -5,7 +5,8 @@ import { useUploadImage } from "../../hooks/useUploadImage";
 export const Certificade = () => {
   const [state, handleOnChange, handleOnUpload, handleDeleteFile] =
     useUploadImage();
-  const url = useGetImages();
+  const [url] = useGetImages();
+
 
   return (
     <>

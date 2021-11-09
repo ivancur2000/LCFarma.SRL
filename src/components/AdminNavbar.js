@@ -19,8 +19,8 @@ export const AdminNavbar = () => {
               className="nav-item bars p-2 m-2 col-1"
               role="button"
               data-bs-toggle="offcanvas"
-              href="/#slidebar"
               aria-controls="slidebar"
+              href="/#slidebar"
             >
               <FaBars className="text-light fs-4" />
             </a>

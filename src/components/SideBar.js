@@ -29,22 +29,30 @@ export const SideBar = () => {
       <div className="offcanvas-body">
         <div className="p-5">
           <div className="nav flex-column nav-pills">
-            <Link to="/home" className="nav-link slideBtn active mt-3">
-              <BiHomeAlt />
-              Inicio
-            </Link>
-            <Link to="/info" className="nav-link slideBtn active mt-3">
-              <FaPlaceOfWorship />
-              Información de la empresa
-            </Link>
-            <Link to="/products" className="nav-link slideBtn active mt-3">
-              <FaProductHunt />
-              Productos
-            </Link>
-            <Link to="/certificade" className="nav-link slideBtn active mt-3">
-              <MdBusinessCenter />
-              Certificados
-            </Link>
+            <button className="btn-slider" data-bs-dismiss="offcanvas" >
+              <Link to="/home" className="nav-link slideBtn active mt-3">
+                <BiHomeAlt />
+                Inicio
+              </Link>
+            </button>
+            <button className="btn-slider" data-bs-dismiss="offcanvas" >
+              <Link to="/info" className="nav-link slideBtn active mt-3">
+                <FaPlaceOfWorship />
+                Información de la empresa
+              </Link>
+            </button>
+            <button className="btn-slider" data-bs-dismiss="offcanvas" >
+              <Link to="/products" className="nav-link slideBtn active mt-3">
+                <FaProductHunt />
+                Productos
+              </Link>
+            </button>
+            <button className="btn-slider" data-bs-dismiss="offcanvas" >
+              <Link to="/certificade" className="nav-link slideBtn active mt-3">
+                <MdBusinessCenter />
+                Certificados
+              </Link>
+            </button>
           </div>
         </div>
       </div>

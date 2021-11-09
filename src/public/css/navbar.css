@@ -50,6 +50,10 @@
   margin: 0 10px;
 }
 
+.nav-link:hover{
+  color: #BABABA !important;
+}
+
 .brand-header {
   color: #ffff;
   text-align: left;

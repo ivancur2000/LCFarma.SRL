@@ -2,7 +2,7 @@
 * {
   font-family: "Zen Kaku Gothic Antique", sans-serif;
 }
-.parraf{
+.parraf {
   color: #656565;
 }
 .btnPurple {
@@ -13,13 +13,16 @@
 .btnPurple:hover {
   background: #327e51 !important;
 }
-.btn-goUp{
+.btn-goUp {
   background: #1b5b3f !important;
   border-radius: 20px !important;
   color: #ffff !important;
   margin-right: 15px;
   width: 150px !important;
 }
-.btn-goUp:hover{
+.btn-goUp:hover {
   background: rgb(44, 102, 77) !important;
+}
+a {
+  text-decoration: none !important;
 }

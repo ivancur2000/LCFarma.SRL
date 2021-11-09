@@ -3,8 +3,19 @@
   height: 162px;
 }
 
+.imageProductModal{
+  max-width: 300px !important;
+  height: 170px !important;
+}
+
+.innerCarousel{
+  width: 300px !important;
+  height: 200px !important;
+  background: #ffff !important;
+}
+
 .iconProduct {
-  font-size: 55px;
+  font-size: 45px;
   background: #8e4797;
   padding: 15px;
   border-radius: 50%;
@@ -13,4 +24,10 @@
 
 .text-left {
   text-align: left;
+}
+.containerSlider{
+  background: #ffff!important;
+}
+.slideImg{
+  max-height: 200px;
 }

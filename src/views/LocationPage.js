@@ -1,4 +1,6 @@
 import React from "react";
+import { FormContact } from "../components/FormContact";
+
 import "../public/css/location.css";
 
 export const LocationPage = ({ changeLanguage }) => {
@@ -14,7 +16,11 @@ export const LocationPage = ({ changeLanguage }) => {
         <div className="row mx-auto p-2 justify-content-center">
           <div className="col-md-7 mx-auto box-location">
             <h3>{changeLanguage ? "Address" : "Dirección"}</h3>
-            <p>Av. Francia calle 21 No. 200 Zona Achumani</p>
+            <p>
+              {changeLanguage
+                ? "#200 Achumani Ave. Francia, 21 Street"
+                : "Av. Francia calle 21 No. 200 Zona Achumani"}
+            </p>
             <h3>{changeLanguage ? "Phones" : "Telefonos"}</h3>
             <p>2 713644 | 2 713268 | 707 79387</p>
             <h3>
@@ -24,7 +30,7 @@ export const LocationPage = ({ changeLanguage }) => {
               {changeLanguage ? "Monday to Friday" : "Lunes a Viernes"} 8:00 -
               18.30
             </p>
-            <p>{changeLanguage ? "Saturday" : "Sabado"} 8:00 am - 13:00 </p>
+            <p>{changeLanguage ? "Saturday" : "Sabado"} 8:00 - 13:00 </p>
           </div>
           <div className="col-md-5 mx-auto">
             <iframe
@@ -44,7 +50,11 @@ export const LocationPage = ({ changeLanguage }) => {
         <div className="row mx-auto p-2 justify-content-center">
           <div className="col-md-7 mx-auto box-location">
             <h3>{changeLanguage ? "Address" : "Dirección"}</h3>
-            <p>C/ Idelfonso Murguia No 516</p>
+            <p>
+              {changeLanguage
+                ? "#516 Idelfonso Murguia Street"
+                : "C/ Idelfonso Murguia No 516"}
+            </p>
             <h3>{changeLanguage ? "Phones" : "Telefonos"}</h3>
             <p>+591 72259459</p>
             <h3>
@@ -54,7 +64,7 @@ export const LocationPage = ({ changeLanguage }) => {
               {changeLanguage ? "Monday to Friday" : "Lunes a Viernes"} 8:00 -
               18.30
             </p>
-            <p>{changeLanguage ? "Saturday" : "Sabado"} 8:00 am - 13:00 </p>
+            <p>{changeLanguage ? "Saturday" : "Sabado"} 8:00 - 13:00 </p>
           </div>
           <div className="col-md-5 mx-auto">
             <iframe
@@ -74,7 +84,11 @@ export const LocationPage = ({ changeLanguage }) => {
         <div className="row mx-auto p-2 justify-content-center">
           <div className="col-md-7 mx-auto box-location">
             <h3>{changeLanguage ? "Address" : "Dirección"}</h3>
-            <p>Avenida 2 agosto calle #7 , lado sur</p>
+            <p>
+              {changeLanguage
+                ? "Ave. 2 de Agosto, 7 Street, South side"
+                : "Avenida 2 agosto calle #7 , lado sur"}
+            </p>
             <h3>{changeLanguage ? "Phones" : "Telefonos"}</h3>
             <p>69217031 </p>
             <h3>
@@ -84,7 +98,7 @@ export const LocationPage = ({ changeLanguage }) => {
               {changeLanguage ? "Monday to Friday" : "Lunes a Viernes"} 8:00 -
               18.30
             </p>
-            <p>{changeLanguage ? "Saturday" : "Sabado"} 8:00 am - 13:00 </p>
+            <p>{changeLanguage ? "Saturday" : "Sabado"} 8:00 - 13:00 </p>
           </div>
           <div className="col-md-5 mx-auto">
             <iframe
@@ -99,68 +113,7 @@ export const LocationPage = ({ changeLanguage }) => {
         </div>
       </div>
       <hr />
-      <div className="container">
-        <div className="row justify-content-center mx-0 my-3">
-          <form id="form" className="col-md-5">
-            <h3 className="title-about text-center my-4">
-              {changeLanguage ? "GET IN TOUCH" : "PONTE EN CONTACTO"}
-            </h3>
-            <div className="row">
-              <div className="mb-3 col-6">
-                <input
-                  type="text"
-                  className="form-control form-location"
-                  placeholder={changeLanguage ? "Name" : "Nombre"}
-                />
-              </div>
-              <div className="mb-3 col-6">
-                <input
-                  type="text"
-                  className="form-control form-location"
-                  placeholder={changeLanguage ? "Surname" : "Apellido"}
-                />
-              </div>
-            </div>
-            <div className="row">
-              <div className="mb-3 col-6">
-                <input
-                  type="text"
-                  className="form-control form-location"
-                  placeholder="E-mail"
-                />
-              </div>
-              <div className="mb-3 col-6">
-                <input
-                  type="text"
-                  className="form-control form-location"
-                  placeholder={changeLanguage ? "Phone" : "Teléfono"}
-                />
-              </div>
-            </div>
-            <div className="mb-3">
-              <textarea
-                name=""
-                id=""
-                className="form-control form-location"
-                placeholder={
-                  changeLanguage
-                    ? "Write your message here"
-                    : "Escribe tu mensaje aquí"
-                }
-                cols="30"
-                rows="5"
-              ></textarea>
-            </div>
-            <div className="row justify-content-center">
-              <div className="col-4">
-                <button className="btn btn-formSend" type="button">
-                  {changeLanguage ? "Send" : "Enviar"}
-                </button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
+      <FormContact changeLanguage={changeLanguage} />
     </>
   );
 };

@@ -42,7 +42,7 @@ export const Navbar = ({ changeLanguage, handleOnChange }) => {
               </p>
               <p>
                 <ImLocation className="me-1" />
-                La Paz - Cochabamba - Santa Cruz
+                La Paz - Cochabamba - Santa Cruz - Oruro - Potosí - Sucre - Tarija - Cobija
               </p>
             </div>
 

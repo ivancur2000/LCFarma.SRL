@@ -27,18 +27,6 @@ export const Footer = ({ changeLanguage }) => {
           >
             <FaFacebook />
           </a>
-          {/* <a className="me-4 text-reset" href="/#"> */}
-          {/*   <FaTwitter /> */}
-          {/* </a> */}
-          {/* <a className="me-4 text-reset" href="/#"> */}
-          {/*   <FaInstagram /> */}
-          {/* </a> */}
-          {/* <a className="me-4 text-reset" href="/#"> */}
-          {/*   <FaGoogle /> */}
-          {/* </a> */}
-          {/* <a className="me-4 text-reset" href="/#"> */}
-          {/*   <FaLinkedin /> */}
-          {/* </a> */}
         </div>
       </section>
       <section>
@@ -51,8 +39,8 @@ export const Footer = ({ changeLanguage }) => {
               </h6>
               <p>
                 {changeLanguage
-                  ? "LCFarma.SRL is a pharmaceutical distributor, with more than 8 years of experience in the market, having offices in 3 departments: La Paz, Cochabamba, Santa Cruz"
-                  : "LCFarma.SRL es una distribuidora farmacéutica, con más de 8 años de experiencia en el mercado teniendo oficinas en 3 departamentos: La Paz, Cochabamba, Santa Cruz"}
+                  ? "LCFarma.SRL is a pharmaceutical distributor, with more than 8 years of experience in the national market, with offices in: La Paz, Cochabamba, Santa Cruz, Oruro, Potosí, Sucre, Tarija, Cobija"
+                  : "LCFarma.SRL es una distribuidora farmacéutica, con más de 8 años de experiencia en el mercado nacional, con oficinas en: La Paz, Cochabamba, Santa Cruz, Oruro, Potosí, Sucre, Tarija, Cobija"}
               </p>
             </div>
 
@@ -85,11 +73,11 @@ export const Footer = ({ changeLanguage }) => {
               </h6>
               <p>
                 <AiFillHome className="me-1" />
-                La Paz-Cochabamba-Santa Cruz
+                La Paz-Cochabamba-Santa Cruz-Oruro-Potosí-Sucre-Tarifa-Cobija
               </p>
               <p>
                 <RiCellphoneFill className="me-1" />
-                Cel: 707 79387
+                Cel: 70779387 (LP) - 60098699 (SC) - 72259459 (CB) - 67238330 (OR) - 71153927 (PT) - 71153927 (CH) - 77172947 (TJ) - 71259201 (PD)
               </p>
               <p>
                 <AiFillPhone className="me-1" />

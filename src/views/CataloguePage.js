@@ -31,16 +31,18 @@ export const CataloguePage = ({ changeLanguage }) => {
           )}
           {docs.map((product, index) => (
             <div className="col-md-3 mx-auto my-2" key={index}>
-              <Image
-                imgString={
-                  product.doc.data.value.mapValue.fields.img.arrayValue
-                    .values[0].stringValue
-                }
-                name={product.doc.data.value.mapValue.fields.name.stringValue
-                  .replace(/ /g, "")
-                  .replace(/ *\([^)]*\) */g, "")}
-                className="imageProductModal mx-1"
-              />
+              <div className="text-center">
+                <Image
+                  imgString={
+                    product.doc.data.value.mapValue.fields.img.arrayValue
+                      .values[0].stringValue
+                  }
+                  name={product.doc.data.value.mapValue.fields.name.stringValue
+                    .replace(/ /g, "")
+                    .replace(/ *\([^)]*\) */g, "")}
+                  className="imageProductModal mx-auto"
+                />
+              </div>
               <h4 className="fs-5 fw-bold">
                 {product.doc.data.value.mapValue.fields.name.stringValue}
               </h4>

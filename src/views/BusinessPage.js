@@ -31,12 +31,12 @@ export const BusinessPage = ({ changeLanguage }) => {
             </div>
           )}
           {url.map((img, index) => (
-            <div key={index} className="col-md-4">
+            <div key={index} className="col-md-4 text-center">
               <div data-bs-toggle="modal" data-bs-target={`#img${index}`}>
                 <img
                   src={img.urlDir}
                   alt="certificado"
-                  className="m-3 imageCert mx-auto"
+                  className="m-3 imageCert"
                 />
               </div>
               <div

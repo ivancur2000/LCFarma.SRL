@@ -5,7 +5,7 @@ export const LocationMap = ({ changeLanguage, city, addressTran, address, phones
     <div className="my-3 container">
       <h4 className="text-center title-about"> {city}</h4>
       <div className="row mx-auto p-2 justify-content-center">
-        <div className="col-md-7 mx-auto box-location">
+        <div className="col-md-5 mx-auto box-location">
           <h3>{changeLanguage ? "Address" : "Dirección"}</h3>
           <p>
             {changeLanguage

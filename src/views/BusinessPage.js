@@ -31,7 +31,7 @@ export const BusinessPage = ({ changeLanguage }) => {
             </div>
           )}
           {url.map((img, index) => (
-            <div key={index} className="col-md-4 text-center w-100">
+            <div key={index} className="col-md-4 text-center">
               <div data-bs-toggle="modal" data-bs-target={`#img${index}`}>
                 <img
                   src={img.urlDir}

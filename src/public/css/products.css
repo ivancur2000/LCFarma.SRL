@@ -8,6 +8,11 @@
   height: 170px !important;
 }
 
+.imageProductModal2{
+  max-width: 100% !important;
+  height: 220px !important;
+}
+
 .innerCarousel{
   width: 300px !important;
   height: 200px !important;

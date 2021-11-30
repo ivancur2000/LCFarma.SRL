@@ -12,15 +12,15 @@ export const LocationMap = ({ changeLanguage, city, addressTran, address, phones
               ? addressTran
               : address}
           </p>
-          <h3>{changeLanguage ? "Phones" : "Telefonos"}</h3>
+          <h3>{changeLanguage ? "Phones" : "Teléfonos"}</h3>
           <p>{ phones }</p>
           <h3>
             {changeLanguage ? "Attention Schedule " : "Horarios de atención"}
           </h3>
           <p>
-            {changeLanguage ? "Monday to Friday" : "Lunes a Viernes"} 8:00 - 18.30
+            {changeLanguage ? "Monday to Friday" : "Lunes a Viernes"} 8:00 - 18:30
           </p>
-          <p>{changeLanguage ? "Saturday" : "Sabado"} 8:00 - 13:00 </p>
+          <p>{changeLanguage ? "Saturday" : "Sábado"} 8:00 - 13:00 </p>
         </div>
         <div className="col-md-5 mx-auto">
           { children }

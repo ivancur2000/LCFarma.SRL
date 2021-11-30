@@ -24,14 +24,14 @@ export const BusinessPage = ({ changeLanguage }) => {
       </p>
       <div className="m-5">
         <h4>{changeLanguage ? "Certificates" : "Certificados"}</h4>
-        <div className="row">
+        <div className="row w-100">
           {loading && (
             <div className="row">
               <div className="spinner-grow m-auto"></div>
             </div>
           )}
           {url.map((img, index) => (
-            <div key={index} className="col-md-4 text-center">
+            <div key={index} className="col-md-4 text-center w-100">
               <div data-bs-toggle="modal" data-bs-target={`#img${index}`}>
                 <img
                   src={img.urlDir}

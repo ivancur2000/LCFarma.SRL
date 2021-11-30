@@ -31,7 +31,7 @@ export const ModalProduct = ({ name, changeLanguage, dataDoc }) => {
         <div className="modal-content">
           <div className="modal-header">
             <h5 className="modal-title">
-              {changeLanguage ? "Drug" : "Farmaco"}
+              {changeLanguage ? "Drug" : "Fármaco"}
             </h5>
             <button
               type="button"
@@ -58,7 +58,7 @@ export const ModalProduct = ({ name, changeLanguage, dataDoc }) => {
                               .replace(/ /g, "")
                               .replace(/ *\([^)]*\) */g, "")}
                             imgString={imgString.stringValue}
-                            className="imageProductModal mx-auto d-block"
+                            className="imageProductModal2 mx-auto d-block"
                           />
                           <span>{index+1}/{data.img.length}</span>
                         </div>
